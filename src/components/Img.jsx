@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+
 // Img — tries the local src first; falls back to a picsum placeholder if the file is missing.
 // Drop the real photo into public/images/ and it takes over automatically.
 const FALLBACKS = {
@@ -24,10 +26,11 @@ const FALLBACKS = {
   '/images/static-newconstruction.jpg': 'https://picsum.photos/seed/sm-newconst/900/600',
 };
 
-export default function Img({ src, alt, className, style, loading = 'lazy', fetchpriority }) {
+const Img = forwardRef(function Img({ src, alt, className, style, loading = 'lazy', fetchpriority }, ref) {
   const fallback = FALLBACKS[src] || 'https://picsum.photos/seed/fb-default/800/600';
   return (
     <img
+      ref={ref}
       src={src}
       alt={alt}
       className={className}
@@ -40,4 +43,6 @@ export default function Img({ src, alt, className, style, loading = 'lazy', fetc
       }}
     />
   );
-}
+});
+
+export default Img;

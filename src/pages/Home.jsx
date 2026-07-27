@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Img from '../components/Img';
+import ScrollGrowImg from '../components/ScrollGrowImg';
 import TrustBar from '../components/TrustBar';
 import StatsBar from '../components/StatsBar';
 import HowItWorks from '../components/HowItWorks';
@@ -188,7 +189,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Photo */}
           <div className="relative rounded-2xl overflow-hidden shadow-xl">
-            <Img
+            <ScrollGrowImg
               src={IMG.tech}
               alt="Static Mechanical HVAC technician ready to help — Los Angeles & San Fernando Valley"
               className="w-full h-[480px] object-cover"

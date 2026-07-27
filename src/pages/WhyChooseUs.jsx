@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Img from '../components/Img';
+import ScrollGrowImg from '../components/ScrollGrowImg';
 import TrustBar from '../components/TrustBar';
 import CTASection from '../components/CTASection';
 import TestimonialsSection from '../components/TestimonialsSection';
@@ -132,7 +133,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl">
-            <Img src={IMG.team} alt="Static Mechanical crew delivering new rooftop HVAC units — Los Angeles, CA" className="w-full h-80 object-cover" />
+            <ScrollGrowImg src={IMG.team} alt="Static Mechanical crew delivering new rooftop HVAC units — Los Angeles, CA" className="w-full h-80 object-cover" />
           </div>
         </div>
       </section>

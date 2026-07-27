@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Img from '../components/Img';
+import ScrollGrowImg from '../components/ScrollGrowImg';
 import TrustBar from '../components/TrustBar';
 import CTASection from '../components/CTASection';
 import SEO from '../components/SEO';
@@ -234,7 +235,7 @@ export default function Services() {
             <div className={`max-w-6xl mx-auto flex flex-col ${s.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
               {/* Photo */}
               <div className="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl">
-                <Img
+                <ScrollGrowImg
                   src={s.img}
                   alt={s.alt || s.title}
                   className="w-full h-72 md:h-96 object-cover"
