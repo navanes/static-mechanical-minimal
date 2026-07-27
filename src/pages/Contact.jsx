@@ -131,10 +131,10 @@ export default function Contact() {
                   <div className="w-10 h-10 bg-brand-red rounded-xl flex items-center justify-center text-lg shrink-0" aria-hidden="true">📞</div>
                   <div>
                     <p className="text-blue-300 text-xs font-bold uppercase tracking-wider mb-0.5">Call or Text</p>
-                    <a href={`tel:${PHONE}`} className="font-display font-black text-xl hover:text-yellow-300 transition-colors">
+                    <a href={`tel:${PHONE}`} className="inline-block py-2 -my-2 font-display font-black text-xl hover:text-yellow-300 transition-colors">
                       {PHONE}
                     </a>
-                    <a href={`tel:${PHONE_ALT}`} className="block text-sm font-semibold text-blue-200 hover:text-yellow-300 transition-colors mt-0.5">
+                    <a href={`tel:${PHONE_ALT}`} className="block py-1.5 -my-1.5 text-sm font-semibold text-blue-200 hover:text-yellow-300 transition-colors">
                       {PHONE_ALT}
                     </a>
                   </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                   <div className="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center text-lg shrink-0" aria-hidden="true">✉️</div>
                   <div>
                     <p className="text-blue-300 text-xs font-bold uppercase tracking-wider mb-0.5">Email</p>
-                    <a href={`mailto:${EMAIL}`} className="text-sm font-medium hover:text-yellow-300 transition-colors break-all">
+                    <a href={`mailto:${EMAIL}`} className="inline-block py-2 -my-2 text-sm font-medium hover:text-yellow-300 transition-colors break-all">
                       {EMAIL}
                     </a>
                   </div>

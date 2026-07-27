@@ -42,17 +42,17 @@ export default function Footer() {
             Los Angeles, Glendale, Burbank, Pasadena, East Los Angeles, San Fernando, and the San
             Fernando Valley. Licensed, bonded, and insured.
           </p>
-          <div className="space-y-2 text-sm">
-            <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-white hover:text-yellow-300 transition-colors font-bold">
+          <div className="text-sm -my-2">
+            <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-white hover:text-yellow-300 transition-colors font-bold py-2.5">
               <span aria-hidden="true">📞</span> {PHONE}
             </a>
-            <a href={`tel:${PHONE_ALT}`} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+            <a href={`tel:${PHONE_ALT}`} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors py-2.5">
               <span aria-hidden="true">📞</span> {PHONE_ALT}
             </a>
-            <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 hover:text-white transition-colors">
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 hover:text-white transition-colors py-2.5">
               <span aria-hidden="true">✉️</span> {EMAIL}
             </a>
-            <a href={YELP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+            <a href={YELP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors py-2.5">
               <span aria-hidden="true">⭐</span> Read Our Yelp Reviews
             </a>
           </div>
@@ -61,10 +61,10 @@ export default function Footer() {
         {/* Services column */}
         <div>
           <h3 className="font-display font-black text-white uppercase tracking-wide text-sm mb-4">Our Services</h3>
-          <ul className="space-y-2">
+          <ul className="-my-2">
             {serviceLinks.map(({ label, href }) => (
               <li key={label}>
-                <Link to={href} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+                <Link to={href} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 py-2">
                   <span className="text-brand-red text-xs" aria-hidden="true">›</span>
                   {label}
                 </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
         {/* Quick links + hours */}
         <div>
           <h3 className="font-display font-black text-white uppercase tracking-wide text-sm mb-4">Quick Links</h3>
-          <ul className="space-y-2 mb-7">
+          <ul className="-my-2 mb-5">
             {[
               { to: '/',              label: 'Home' },
               { to: '/services',      label: 'Services' },
@@ -85,7 +85,7 @@ export default function Footer() {
               { to: '/contact',       label: 'Get a Free Quote' },
             ].map(({ to, label }) => (
               <li key={label}>
-                <Link to={to} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5">
+                <Link to={to} className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 py-2">
                   <span className="text-brand-red text-xs" aria-hidden="true">›</span>
                   {label}
                 </Link>

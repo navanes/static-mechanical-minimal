@@ -19,7 +19,7 @@ export default function TrustBar({ dark = false }) {
           href={YELP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-yellow-400 hover:text-yellow-300 transition-colors"
+          className="inline-block py-2.5 -my-2.5 text-yellow-400 hover:text-yellow-300 transition-colors"
           aria-label="Static Mechanical on Yelp"
         >
           FIND US ON YELP
