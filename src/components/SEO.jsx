@@ -1,0 +1,95 @@
+import { Helmet } from 'react-helmet-async';
+
+const SITE_NAME = 'Static Mechanical Inc.';
+const PHONE = '818-318-3032';
+// Placeholder domain — update once staticmechanicalinc.com (or the real domain) is registered/confirmed.
+const DOMAIN = 'https://staticmechanicalinc.com';
+const AREA = 'Los Angeles & the San Fernando Valley, CA';
+const OG_IMAGE = `${DOMAIN}/images/static-hero.jpg`;
+const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
+
+const schemaJSON = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'HVACBusiness',
+  name: SITE_NAME,
+  telephone: '+18183183032',
+  email: 'Staticmechanicalinc@gmail.com',
+  url: DOMAIN,
+  sameAs: [YELP_URL],
+  priceRange: '$$',
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '19:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday'], opens: '08:00', closes: '17:00' },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Los Angeles',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    'Los Angeles','Glendale','Burbank','Pasadena','Van Nuys',
+    'North Hollywood','Sherman Oaks','Encino','Calabasas',
+    'Woodland Hills','Northridge','Reseda','Tarzana',
+  ],
+});
+
+export default function SEO({ title, description, canonical, breadcrumb }) {
+  const fullTitle = title
+    ? `${title} | ${SITE_NAME}`
+    : `${SITE_NAME} | HVAC Contractor in ${AREA} | ${PHONE}`;
+
+  const metaDesc = description ||
+    `Static Mechanical Inc. — full-service HVAC contractor for residential & commercial clients in ${AREA}. Licensed & insured. Same-day service. Call ${PHONE}.`;
+
+  const canonicalUrl = `${DOMAIN}${canonical || '/'}`;
+
+  const breadcrumbSchema = breadcrumb
+    ? JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
+          { '@type': 'ListItem', position: 2, name: breadcrumb.name, item: `${DOMAIN}${breadcrumb.path}` },
+        ],
+      })
+    : null;
+
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={metaDesc} />
+      <link rel="canonical" href={canonicalUrl} />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="keywords" content="HVAC contractor Los Angeles, mechanical contractor, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, San Fernando Valley HVAC, Glendale HVAC, Burbank HVAC, same day HVAC" />
+      <meta name="geo.region" content="US-CA" />
+      <meta name="geo.placename" content="Los Angeles, CA" />
+      <meta name="author" content={SITE_NAME} />
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={metaDesc} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image:width" content="1800" />
+      <meta property="og:image:height" content="2400" />
+      <meta property="og:image:alt" content="Static Mechanical Inc. — Los Angeles HVAC Contractor" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={metaDesc} />
+      <meta name="twitter:image" content={OG_IMAGE} />
+
+      {/* JSON-LD: Business */}
+      <script type="application/ld+json">{schemaJSON}</script>
+      {/* JSON-LD: Breadcrumb */}
+      {breadcrumbSchema && (
+        <script type="application/ld+json">{breadcrumbSchema}</script>
+      )}
+    </Helmet>
+  );
+}

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Inter, system-ui, Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    min-width: 320px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-brand-red text-white font-bold py-3 px-6 rounded transition-all hover:bg-red-900 uppercase tracking-wide;
+  }
+  .btn-outline {
+    @apply border-2 border-white text-white font-bold py-3 px-6 rounded transition-all hover:bg-white hover:text-brand-red uppercase tracking-wide;
+  }
+}
