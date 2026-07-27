@@ -23,18 +23,18 @@ const IMG = {
 };
 
 const services = [
-  { img: IMG.acCard,  title: 'AC Repair & Diagnostics',       desc: 'Fast, accurate diagnosis and repair for all makes and models. We get your AC running the same day.',       href: '/services#ac-repair-diagnostics' },
-  { img: IMG.furnace, title: 'Furnace Repair & Installation',  desc: 'From emergency furnace repairs to full new installations — we keep you warm all winter.',                 href: '/services#furnace-repair-installation' },
-  { img: IMG.thermo,  title: 'Thermostat Installation',        desc: 'Upgrade to a smart thermostat and start saving on energy bills from day one.',                            href: '/services#thermostat-installation' },
-  { img: IMG.mini,    title: 'Mini Split Systems',             desc: 'Ductless comfort exactly where you need it — perfect for additions, garages, and older homes.',            href: '/services#mini-split-systems' },
-  { img: IMG.change,  title: 'Full System Change-Outs',        desc: 'Time for a new system? We handle full HVAC replacements — residential and commercial — with energy-efficient equipment.', href: '/services#full-system-change-outs', pos: 'center 78%' },
-  { img: IMG.air,     title: 'Airflow & Efficiency',           desc: 'Poor airflow or high bills? We diagnose ductwork, zoning, and ventilation issues for peak performance.',   href: '/services#airflow-efficiency' },
+  { img: IMG.acCard,  title: 'AC Repair & Diagnostics',       desc: 'Fast, accurate diagnosis and repair for all makes and models. We get your AC running the same day.',       href: '/services#ac-repair-diagnostics', alt: 'AC repair technician working on an outdoor condenser unit — Glendale, CA' },
+  { img: IMG.furnace, title: 'Furnace Repair & Installation',  desc: 'From emergency furnace repairs to full new installations — we keep you warm all winter.',                 href: '/services#furnace-repair-installation', alt: 'Gas furnace installation — Burbank, CA' },
+  { img: IMG.thermo,  title: 'Thermostat Installation',        desc: 'Upgrade to a smart thermostat and start saving on energy bills from day one.',                            href: '/services#thermostat-installation', alt: 'Smart thermostat installation — Pasadena, CA' },
+  { img: IMG.mini,    title: 'Mini Split Systems',             desc: 'Ductless comfort exactly where you need it — perfect for additions, garages, and older homes.',            href: '/services#mini-split-systems', alt: 'Ductless mini split installation — San Fernando Valley, CA' },
+  { img: IMG.change,  title: 'Full System Change-Outs',        desc: 'Time for a new system? We handle full HVAC replacements — residential and commercial — with energy-efficient equipment.', href: '/services#full-system-change-outs', pos: 'center 78%', alt: 'Crane delivering new rooftop HVAC package units for a commercial change-out — Los Angeles, CA' },
+  { img: IMG.air,     title: 'Airflow & Efficiency',           desc: 'Poor airflow or high bills? We diagnose ductwork, zoning, and ventilation issues for peak performance.',   href: '/services#airflow-efficiency', alt: 'Supply duct and diffuser installation — East Los Angeles, CA' },
 ];
 
 const areas = [
-  'Los Angeles','Glendale','Burbank','Pasadena','Van Nuys','North Hollywood',
-  'Sherman Oaks','Encino','Woodland Hills','Northridge','Chatsworth',
-  'Reseda','Tarzana','Canoga Park','Calabasas','Studio City','Toluca Lake',
+  'Los Angeles','Glendale','Burbank','Pasadena','East Los Angeles','San Fernando',
+  'Van Nuys','North Hollywood','Sherman Oaks','Encino','Woodland Hills','Northridge',
+  'Chatsworth','Reseda','Tarzana','Canoga Park','Calabasas','Studio City','Toluca Lake',
 ];
 
 export default function Home() {
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden">
           <Img
             src={IMG.hero}
-            alt="Static Mechanical Inc. — commercial rooftop HVAC package units in Los Angeles"
+            alt="Static Mechanical Inc. — commercial rooftop HVAC package units, serving Glendale, Burbank, Pasadena and Los Angeles, CA"
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center 30%' }}
             loading="eager"
@@ -70,15 +70,20 @@ export default function Home() {
               Same-Day Service Available
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase leading-none tracking-tight mb-6">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase leading-none tracking-tight mb-4">
               Reliable<br />
               <span className="text-brand-red">Comfort.</span><br />
               Done Right.
             </h1>
 
+            <h2 className="text-blue-200 text-sm md:text-base font-bold uppercase tracking-widest mb-6">
+              HVAC Contractor Serving Glendale, Burbank, Pasadena &amp; the San Fernando Valley
+            </h2>
+
             <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed max-w-xl">
               Full-service mechanical contracting for homes and businesses across{' '}
-              <strong className="text-white">Los Angeles &amp; the San Fernando Valley.</strong>{' '}
+              <strong className="text-white">Los Angeles, Glendale, Burbank, Pasadena, East Los Angeles,
+              San Fernando, and the greater San Fernando Valley.</strong>{' '}
               Licensed, bonded, and insured — ready when you need us.
             </p>
 
@@ -124,7 +129,8 @@ export default function Home() {
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
               From emergency repairs to full system replacements — we handle every aspect of residential
-              and commercial heating &amp; cooling in Los Angeles.
+              and commercial heating &amp; cooling in Los Angeles, Glendale, Burbank, Pasadena, and the
+              San Fernando Valley.
             </p>
           </div>
 
@@ -139,7 +145,7 @@ export default function Home() {
                 <div className="relative h-48 overflow-hidden">
                   <Img
                     src={s.img}
-                    alt={s.title}
+                    alt={s.alt || s.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     style={s.pos ? { objectPosition: s.pos } : undefined}
                   />
@@ -180,7 +186,7 @@ export default function Home() {
           <div className="relative rounded-2xl overflow-hidden shadow-xl">
             <Img
               src={IMG.tech}
-              alt="Static Mechanical technician ready to help"
+              alt="Static Mechanical HVAC technician ready to help — Los Angeles & San Fernando Valley"
               className="w-full h-[480px] object-cover"
             />
             {/* Floating badge */}
@@ -197,10 +203,10 @@ export default function Home() {
               Your Local HVAC Experts
             </h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              When it comes to heating and cooling in Los Angeles, Static Mechanical is the name
-              homeowners and businesses trust. Our crews handle everything from a single-family
-              furnace repair to a full commercial rooftop change-out — with the same attention
-              to detail on every job.
+              When it comes to heating and cooling in Los Angeles, Glendale, Burbank, and Pasadena,
+              Static Mechanical is the name homeowners and businesses trust. Our crews handle everything
+              from a single-family furnace repair in the San Fernando Valley to a full commercial
+              rooftop change-out — with the same attention to detail on every job.
             </p>
 
             <ul className="space-y-5">
@@ -240,11 +246,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-brand-red font-bold uppercase tracking-widest text-sm mb-2">We Come to You</p>
           <h2 id="areas-heading" className="font-display text-3xl font-black text-gray-900 uppercase tracking-wide mb-4">
-            Serving the Greater Los Angeles Area
+            Serving Glendale, Burbank, Pasadena &amp; the Greater Los Angeles Area
           </h2>
           <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
-            From the San Fernando Valley to Pasadena and beyond — if you're in the{' '}
-            <strong className="text-gray-700">818 or 310 area</strong>, we've got you covered.
+            Searching for an HVAC contractor near me? From Glendale and Burbank to Pasadena, East Los
+            Angeles, San Fernando, and the rest of the San Fernando Valley — if you're in the{' '}
+            <strong className="text-gray-700">818, 626, or 323 area</strong>, we've got you covered.
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {areas.map((city) => (
@@ -260,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* ─── CTA ──────────────────────────────────────────────────────────── */}
-      <CTASection />
+      <CTASection sub="Serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the greater San Fernando Valley — same-day service available." />
 
       {/* ─── BOTTOM STRIP ─────────────────────────────────────────────────── */}
       <div className="bg-gray-900 py-4 px-4">

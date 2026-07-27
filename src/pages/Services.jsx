@@ -20,6 +20,7 @@ const IMG = {
 const services = [
   {
     img: IMG.acRepair,
+    alt: 'AC repair technician diagnosing an outdoor condenser unit — Glendale, CA',
     icon: '❄️',
     id: 'ac-repair-diagnostics',
     title: 'AC Repair & Diagnostics',
@@ -39,6 +40,7 @@ const services = [
   },
   {
     img: IMG.furnace,
+    alt: 'Gas furnace repair and installation — Burbank, CA',
     icon: '🔥',
     id: 'furnace-repair-installation',
     title: 'Furnace Repair & Installation',
@@ -58,6 +60,7 @@ const services = [
   },
   {
     img: IMG.thermo,
+    alt: 'Smart thermostat installation — Pasadena, CA',
     icon: '🌡️',
     id: 'thermostat-installation',
     title: 'Thermostat Installation',
@@ -77,6 +80,7 @@ const services = [
   },
   {
     img: IMG.mini,
+    alt: 'Ductless mini split system installation — East Los Angeles, CA',
     icon: '🔧',
     id: 'mini-split-systems',
     title: 'Mini Split Systems',
@@ -96,6 +100,7 @@ const services = [
   },
   {
     img: IMG.changeout,
+    alt: 'Crane delivering new rooftop HVAC package units for a commercial system change-out — Los Angeles, CA',
     pos: 'center 78%',
     icon: '⚙️',
     id: 'full-system-change-outs',
@@ -116,6 +121,7 @@ const services = [
   },
   {
     img: IMG.airflow,
+    alt: 'Supply duct and diffuser installation for improved airflow — San Fernando, CA',
     icon: '💨',
     id: 'airflow-efficiency',
     title: 'Airflow & Efficiency Solutions',
@@ -153,6 +159,10 @@ const faqs = [
     a: 'Yes. Static Mechanical Inc. is fully licensed by the State of California (LIC #1092530), bonded, and insured. All technicians are background-checked.',
   },
   {
+    q: 'Is there an HVAC contractor near me in Glendale, Burbank, or Pasadena?',
+    a: 'Yes — Static Mechanical is a local HVAC contractor based in the San Fernando Valley, serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando, and the rest of the greater Los Angeles area. If you\'re searching for HVAC service near me, we\'re already in your neighborhood.',
+  },
+  {
     q: 'Do you offer any warranties?',
     a: 'Yes. We stand behind our work with a labor warranty on all repairs, and new equipment comes with the manufacturer\'s warranty plus our installation guarantee.',
   },
@@ -172,8 +182,8 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="HVAC Services — AC Repair, Furnace, Mini Split & More"
-        description="HVAC services for residential & commercial clients in Los Angeles & San Fernando Valley: AC repair, furnace installation, smart thermostats, mini splits, full change-outs & airflow. Same-day service. Call 818-318-3032."
+        title="HVAC Services in Glendale, Burbank, Pasadena & Los Angeles"
+        description="HVAC services for residential & commercial clients in Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the Los Angeles area: AC repair, furnace installation, smart thermostats, mini splits, full change-outs & airflow. Same-day service. Call 818-318-3032."
         canonical="/services"
         breadcrumb={{ name: 'Services', path: '/services' }}
       />
@@ -192,9 +202,12 @@ export default function Services() {
         />
         <div className="relative z-10">
           <p className="text-brand-red font-bold uppercase tracking-widest text-sm mb-3">Everything HVAC</p>
-          <h1 className="font-display text-5xl font-black text-white uppercase tracking-wide mb-4">Our Services</h1>
+          <h1 className="font-display text-5xl font-black text-white uppercase tracking-wide mb-4">
+            HVAC Services in Glendale, Burbank &amp; Pasadena
+          </h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-            Expert heating &amp; cooling solutions for homes and businesses — done right, guaranteed.
+            Expert heating &amp; cooling solutions for homes and businesses across Los Angeles, East Los
+            Angeles, San Fernando &amp; the San Fernando Valley — done right, guaranteed.
           </p>
         </div>
       </section>
@@ -204,7 +217,8 @@ export default function Services() {
         <div className="max-w-3xl mx-auto text-center text-gray-600 leading-relaxed text-lg">
           At <strong className="text-gray-900">Static Mechanical Inc.</strong>, we provide a full
           range of HVAC services for residential and commercial clients across the year. Our licensed, bonded, and
-          insured crews serve <strong className="text-gray-900">Los Angeles and the San Fernando Valley</strong> with
+          insured crews serve <strong className="text-gray-900">Glendale, Burbank, Pasadena, East Los Angeles,
+          San Fernando, and the greater Los Angeles &amp; San Fernando Valley area</strong> with
           fast, reliable, professional service — 7 days a week.
         </div>
       </section>
@@ -222,7 +236,7 @@ export default function Services() {
               <div className="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl">
                 <Img
                   src={s.img}
-                  alt={s.title}
+                  alt={s.alt || s.title}
                   className="w-full h-72 md:h-96 object-cover"
                   style={s.pos ? { objectPosition: s.pos } : undefined}
                 />
@@ -289,7 +303,10 @@ export default function Services() {
       </section>
 
       <TrustBar />
-      <CTASection heading="Need HVAC Service Today?" sub="Same-day appointments available. Call us or submit a request and we'll be there." />
+      <CTASection
+        heading="Need HVAC Service Today?"
+        sub="Serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the greater Los Angeles area — same-day appointments available."
+      />
     </>
   );
 }

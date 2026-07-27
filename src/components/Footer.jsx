@@ -18,8 +18,8 @@ const serviceLinks = [
 ];
 
 const areas = [
-  'Los Angeles', 'Glendale', 'Burbank', 'Pasadena', 'Van Nuys',
-  'North Hollywood', 'Sherman Oaks', 'Encino', 'Woodland Hills', 'Northridge',
+  'Los Angeles', 'Glendale', 'Burbank', 'Pasadena', 'East Los Angeles', 'San Fernando',
+  'Van Nuys', 'North Hollywood', 'Sherman Oaks', 'Encino', 'Woodland Hills', 'Northridge',
 ];
 
 export default function Footer() {
@@ -39,7 +39,8 @@ export default function Footer() {
           </Link>
           <p className="text-sm text-gray-400 leading-relaxed mb-5">
             Full-service mechanical contractor serving residential and commercial clients across
-            Los Angeles and the San Fernando Valley. Licensed, bonded, and insured.
+            Los Angeles, Glendale, Burbank, Pasadena, East Los Angeles, San Fernando, and the San
+            Fernando Valley. Licensed, bonded, and insured.
           </p>
           <div className="space-y-2 text-sm">
             <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-white hover:text-yellow-300 transition-colors font-bold">
@@ -120,7 +121,9 @@ export default function Footer() {
             ))}
           </ul>
           <p className="text-xs text-gray-500 mt-4">
-            Serving the 818 &amp; 310 area codes and surrounding communities.
+            Serving the 818, 626 &amp; 323 area codes — including Los Angeles (90001–90089),
+            Glendale (91201–91208), Burbank (91501–91510), and Pasadena (91101–91107) zip codes,
+            and surrounding communities.
           </p>
 
           {/* Trust badges */}

@@ -91,8 +91,8 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Us — Request HVAC Service or Free Quote"
-        description="Contact Static Mechanical Inc. for same-day HVAC service in Los Angeles & San Fernando Valley. Call 818-318-3032 or fill out our form for a free quote."
+        title="Contact Us — HVAC Service in Glendale, Burbank & Pasadena"
+        description="Contact Static Mechanical Inc. for same-day HVAC service in Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the Los Angeles area. Call 818-318-3032 or fill out our form for a free quote."
         canonical="/contact"
         breadcrumb={{ name: 'Contact', path: '/contact' }}
       />
@@ -110,7 +110,9 @@ export default function Contact() {
           <p className="text-brand-red font-bold uppercase tracking-widest text-sm mb-3">We're Here to Help</p>
           <h1 className="font-display text-5xl font-black text-white uppercase tracking-wide mb-4">Contact Us</h1>
           <p className="text-blue-200 text-lg max-w-xl mx-auto">
-            Call us directly for the fastest response, or fill out the form and we'll get back to you within the hour.
+            Serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando &amp; the greater Los
+            Angeles area. Call us directly for the fastest response, or fill out the form and we'll
+            get back to you within the hour.
           </p>
         </div>
       </section>
@@ -150,7 +152,8 @@ export default function Contact() {
                   <div className="w-10 h-10 bg-brand-blue/60 rounded-xl flex items-center justify-center text-lg shrink-0" aria-hidden="true">📍</div>
                   <div>
                     <p className="text-blue-300 text-xs font-bold uppercase tracking-wider mb-0.5">Service Area</p>
-                    <p className="text-sm font-medium">Los Angeles &amp; San Fernando Valley, CA</p>
+                    <p className="text-sm font-medium">Los Angeles, Glendale, Burbank, Pasadena,
+                    East Los Angeles, San Fernando &amp; the San Fernando Valley, CA</p>
                   </div>
                 </div>
               </address>

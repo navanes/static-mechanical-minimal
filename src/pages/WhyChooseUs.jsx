@@ -12,12 +12,12 @@ const IMG = {
 };
 
 const GALLERY = [
-  { src: '/images/static-hero.jpg',            label: 'Commercial Rooftop Package Units' },
-  { src: '/images/static-crane-delivery.jpg',  label: 'Crane-Lift Equipment Delivery' },
-  { src: '/images/static-newconstruction.jpg', label: 'New Construction Roof Curbs' },
-  { src: '/images/static-furnace.jpg',         label: 'Gas Furnace Installation' },
-  { src: '/images/work1.jpg',      label: 'Air Handler Installation' },
-  { src: '/images/work2.jpg',      label: 'Rooftop Package Unit' },
+  { src: '/images/static-hero.jpg',            label: 'Commercial Rooftop Package Units — Los Angeles, CA' },
+  { src: '/images/static-crane-delivery.jpg',  label: 'Crane-Lift Equipment Delivery — Glendale, CA' },
+  { src: '/images/static-newconstruction.jpg', label: 'New Construction Roof Curbs — Burbank, CA' },
+  { src: '/images/static-furnace.jpg',         label: 'Gas Furnace Installation — Pasadena, CA' },
+  { src: '/images/work1.jpg',      label: 'Air Handler Installation — East Los Angeles, CA' },
+  { src: '/images/work2.jpg',      label: 'Rooftop Package Unit — San Fernando, CA' },
   { src: '/images/gallery-30.jpg', label: 'New Construction Ductwork' },
   { src: '/images/gallery-31.jpg', label: 'Commercial Rooftop System' },
   { src: '/images/gallery-32.jpg', label: 'Duct System Installation' },
@@ -53,7 +53,7 @@ const reasons = [
     title: 'Local & Community-Focused',
     color: 'bg-red-50 border-red-100',
     iconBg: 'bg-brand-red',
-    desc: "Static Mechanical is based right here in the San Fernando Valley. We show up, we stand behind our work, and we treat every home and building the way we'd want ours treated.",
+    desc: "Static Mechanical is based right here in the San Fernando Valley, serving Glendale, Burbank, and Pasadena. We show up, we stand behind our work, and we treat every home and building the way we'd want ours treated.",
   },
   {
     icon: '✅',
@@ -74,7 +74,7 @@ const reasons = [
 const credentials = [
   { label: 'State License',        value: 'LIC #1092530' },
   { label: 'Status',               value: 'Fully Bonded & Insured' },
-  { label: 'Service Area',         value: 'LA & San Fernando Valley' },
+  { label: 'Service Area',         value: 'LA, Glendale, Burbank & SFV' },
   { label: 'Technician Training',  value: 'Factory-Certified' },
   { label: 'Background Checks',    value: 'All Staff' },
   { label: 'Satisfaction',         value: '100% Guaranteed' },
@@ -84,8 +84,8 @@ export default function WhyChooseUs() {
   return (
     <>
       <SEO
-        title="Why Choose Static Mechanical — Local, Licensed & Trusted"
-        description="Static Mechanical Inc.: same-day HVAC service, upfront pricing, licensed & bonded, residential and commercial HVAC contractor in Los Angeles. Call 818-318-3032."
+        title="Why Choose Static Mechanical — Glendale, Burbank & Pasadena HVAC"
+        description="Static Mechanical Inc.: same-day HVAC service, upfront pricing, licensed & bonded, residential and commercial HVAC contractor serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the Los Angeles area. Call 818-318-3032."
         canonical="/why-choose-us"
         breadcrumb={{ name: 'Why Choose Us', path: '/why-choose-us' }}
       />
@@ -101,9 +101,10 @@ export default function WhyChooseUs() {
         />
         <div className="relative z-10">
           <p className="text-brand-red font-bold uppercase tracking-widest text-sm mb-3">Why Static Mechanical?</p>
-          <h1 className="font-display text-5xl font-black text-white uppercase tracking-wide mb-4">Your Local HVAC Experts</h1>
+          <h1 className="font-display text-5xl font-black text-white uppercase tracking-wide mb-4">Your Local HVAC Experts in Glendale &amp; Burbank</h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-            Trusted by homeowners and businesses across Los Angeles &amp; the San Fernando Valley.
+            Trusted by homeowners and businesses across Los Angeles, Glendale, Burbank, Pasadena, East
+            Los Angeles, San Fernando &amp; the San Fernando Valley.
           </p>
         </div>
       </section>
@@ -118,18 +119,20 @@ export default function WhyChooseUs() {
             </h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               Static Mechanical Inc. was founded with one mission: provide the kind of honest,
-              high-quality HVAC contracting that homeowners and businesses in Los Angeles couldn't
-              easily find. No bait-and-switch pricing, no scare tactics — just skilled crews who fix
-              the problem and treat every property with respect.
+              high-quality HVAC contracting that homeowners and businesses in Glendale, Burbank,
+              Pasadena, and greater Los Angeles couldn't easily find. No bait-and-switch pricing,
+              no scare tactics — just skilled crews who fix the problem and treat every property
+              with respect.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              From single-family furnace repairs to full commercial rooftop change-outs coordinated
-              with crane crews, we bring the same standard of workmanship to every job — still local,
+              From single-family furnace repairs in San Fernando to full commercial rooftop
+              change-outs in East Los Angeles coordinated with crane crews, we bring the same
+              standard of workmanship to every job across the San Fernando Valley — still local,
               and still showing up same-day when your comfort is on the line.
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl">
-            <Img src={IMG.team} alt="Static Mechanical crew delivering new rooftop HVAC units" className="w-full h-80 object-cover" />
+            <Img src={IMG.team} alt="Static Mechanical crew delivering new rooftop HVAC units — Los Angeles, CA" className="w-full h-80 object-cover" />
           </div>
         </div>
       </section>
@@ -211,7 +214,10 @@ export default function WhyChooseUs() {
       <TestimonialsSection />
 
       <TrustBar />
-      <CTASection heading="Experience the Static Mechanical Difference" sub="Call today for fast, honest HVAC service you can count on." />
+      <CTASection
+        heading="Experience the Static Mechanical Difference"
+        sub="Serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the Los Angeles area — call today for fast, honest HVAC service you can count on."
+      />
     </>
   );
 }

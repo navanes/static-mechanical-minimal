@@ -4,7 +4,7 @@ const SITE_NAME = 'Static Mechanical Inc.';
 const PHONE = '818-318-3032';
 // Placeholder domain — update once staticmechanicalinc.com (or the real domain) is registered/confirmed.
 const DOMAIN = 'https://staticmechanicalinc.com';
-const AREA = 'Los Angeles & the San Fernando Valley, CA';
+const AREA = 'Los Angeles, Glendale, Burbank, Pasadena & the San Fernando Valley, CA';
 const OG_IMAGE = `${DOMAIN}/images/static-hero.jpg`;
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
 
@@ -28,7 +28,7 @@ const schemaJSON = JSON.stringify({
     addressCountry: 'US',
   },
   areaServed: [
-    'Los Angeles','Glendale','Burbank','Pasadena','Van Nuys',
+    'Los Angeles','Glendale','Burbank','Pasadena','East Los Angeles','San Fernando','Van Nuys',
     'North Hollywood','Sherman Oaks','Encino','Calabasas',
     'Woodland Hills','Northridge','Reseda','Tarzana',
   ],
@@ -61,7 +61,7 @@ export default function SEO({ title, description, canonical, breadcrumb }) {
       <meta name="description" content={metaDesc} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="keywords" content="HVAC contractor Los Angeles, mechanical contractor, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, San Fernando Valley HVAC, Glendale HVAC, Burbank HVAC, same day HVAC" />
+      <meta name="keywords" content="HVAC contractor Los Angeles, HVAC Glendale, AC Glendale, HVAC near me, AC repair near me, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC East Los Angeles, HVAC San Fernando, San Fernando Valley HVAC contractor, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
       <meta name="geo.region" content="US-CA" />
       <meta name="geo.placename" content="Los Angeles, CA" />
       <meta name="author" content={SITE_NAME} />
