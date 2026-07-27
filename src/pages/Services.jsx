@@ -182,8 +182,8 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="HVAC Services in Glendale, Burbank, Pasadena & Los Angeles"
-        description="HVAC services for residential & commercial clients in Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the Los Angeles area: AC repair, furnace installation, smart thermostats, mini splits, full change-outs & airflow. Same-day service. Call 818-318-3032."
+        title="HVAC Services — Glendale & Burbank"
+        description="HVAC services in Glendale, Burbank & Pasadena: AC repair, furnace installation, thermostats, mini splits & full change-outs. Same-day service. Call 818-318-3032."
         canonical="/services"
         breadcrumb={{ name: 'Services', path: '/services' }}
       />

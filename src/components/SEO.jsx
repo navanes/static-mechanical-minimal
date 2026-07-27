@@ -5,6 +5,10 @@ const PHONE = '818-318-3032';
 // Placeholder domain — update once staticmechanicalinc.com (or the real domain) is registered/confirmed.
 const DOMAIN = 'https://staticmechanicalinc.com';
 const AREA = 'Los Angeles, Glendale, Burbank, Pasadena & the San Fernando Valley, CA';
+// Short form for title/description defaults — Google truncates titles past ~60 chars
+// and descriptions past ~155, so these must stay compact even though AREA (above) is
+// intentionally long-form for the keywords/schema tags where length doesn't hurt.
+const SHORT_AREA = 'Glendale, Burbank & LA, CA';
 const OG_IMAGE = `${DOMAIN}/images/static-hero.jpg`;
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
 
@@ -37,10 +41,10 @@ const schemaJSON = JSON.stringify({
 export default function SEO({ title, description, canonical, breadcrumb }) {
   const fullTitle = title
     ? `${title} | ${SITE_NAME}`
-    : `${SITE_NAME} | HVAC Contractor in ${AREA} | ${PHONE}`;
+    : `${SITE_NAME} | HVAC Contractor — ${SHORT_AREA}`;
 
   const metaDesc = description ||
-    `Static Mechanical Inc. — full-service HVAC contractor for residential & commercial clients in ${AREA}. Licensed & insured. Same-day service. Call ${PHONE}.`;
+    `Static Mechanical Inc. — full-service HVAC contractor serving ${SHORT_AREA}. Licensed, bonded & insured. Same-day service. Call ${PHONE}.`;
 
   const canonicalUrl = `${DOMAIN}${canonical || '/'}`;
 

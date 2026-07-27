@@ -84,8 +84,8 @@ export default function WhyChooseUs() {
   return (
     <>
       <SEO
-        title="Why Choose Static Mechanical — Glendale, Burbank & Pasadena HVAC"
-        description="Static Mechanical Inc.: same-day HVAC service, upfront pricing, licensed & bonded, residential and commercial HVAC contractor serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the Los Angeles area. Call 818-318-3032."
+        title="Why Choose Us — Glendale & Burbank HVAC"
+        description="Static Mechanical: same-day HVAC service, upfront pricing, licensed & bonded contractor serving Glendale, Burbank & Pasadena. Call 818-318-3032."
         canonical="/why-choose-us"
         breadcrumb={{ name: 'Why Choose Us', path: '/why-choose-us' }}
       />

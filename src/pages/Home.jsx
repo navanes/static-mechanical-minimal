@@ -40,7 +40,11 @@ const areas = [
 export default function Home() {
   return (
     <>
-      <SEO page="home" canonical="/" />
+      <SEO
+        title="HVAC Contractor in Glendale & Burbank, CA"
+        description="Static Mechanical Inc. — HVAC contractor serving Glendale, Burbank, Pasadena & the LA area. Same-day AC & heating repair. Licensed & insured. Call 818-318-3032."
+        canonical="/"
+      />
 
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
       <section

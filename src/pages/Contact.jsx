@@ -91,8 +91,8 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Us — HVAC Service in Glendale, Burbank & Pasadena"
-        description="Contact Static Mechanical Inc. for same-day HVAC service in Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the Los Angeles area. Call 818-318-3032 or fill out our form for a free quote."
+        title="Contact Us — Glendale & Burbank HVAC"
+        description="Contact Static Mechanical for same-day HVAC service in Glendale, Burbank & Pasadena. Call 818-318-3032 or request a free quote online."
         canonical="/contact"
         breadcrumb={{ name: 'Contact', path: '/contact' }}
       />

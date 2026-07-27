@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Static Mechanical Inc. — Full-service HVAC contractor serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the greater Los Angeles area. Same-day AC & heating repair. Licensed & insured. Call 818-318-3032." />
     <meta name="theme-color" content="#04326F" />
-    <meta name="robots" content="index, follow" />
+    <!--
+      No static <meta name="description"> or <meta name="robots"> here on purpose:
+      src/components/SEO.jsx sets both per-page via react-helmet-async. Helmet appends
+      rather than replaces plain HTML meta tags (it only manages tags it rendered itself),
+      so a static description here would sit alongside the per-page one as a duplicate
+      <meta name="description"> — and crawlers can't reliably tell which one to trust.
+    -->
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
