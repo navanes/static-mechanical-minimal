@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ScrollManager from './components/ScrollManager';
+import Analytics from './components/Analytics';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -15,6 +16,7 @@ export default function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ScrollManager />
+        <Analytics />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">

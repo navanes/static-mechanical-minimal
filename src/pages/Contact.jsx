@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TrustBar from '../components/TrustBar';
 import SEO from '../components/SEO';
+import { trackEvent } from '../lib/analytics';
 
 const PHONE = '818-318-3032';
 const PHONE_ALT = '818-699-7654';
@@ -78,6 +79,7 @@ export default function Contact() {
       const data = await res.json();
       if (res.ok) {
         setSubmitted(true);
+        trackEvent('generate_lead', { service: form.service || 'unspecified' });
       } else {
         setServerError(data?.error || 'Something went wrong. Please call us directly.');
       }
