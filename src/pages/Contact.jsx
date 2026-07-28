@@ -119,10 +119,10 @@ export default function Contact() {
 
       {/* Main content */}
       <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-10">
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-10">
 
           {/* Sidebar — 2/5 */}
-          <aside className="md:col-span-2 space-y-6">
+          <aside className="lg:col-span-2 space-y-6">
             {/* Call card */}
             <div className="bg-brand-navy text-white rounded-2xl p-7">
               <h2 className="font-display font-black text-xl uppercase tracking-wide mb-5">Get In Touch</h2>
@@ -219,7 +219,7 @@ export default function Contact() {
           </aside>
 
           {/* Form — 3/5 */}
-          <div className="md:col-span-3 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+          <div className="lg:col-span-3 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
             <h2 className="font-display font-black text-2xl text-brand-navy uppercase tracking-wide mb-2">
               Request a Quote or Service
             </h2>
