@@ -88,7 +88,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-paper text-ink">
+    <div className="bg-[linear-gradient(180deg,rgba(5,8,13,0.28),rgba(5,8,13,0.70))] text-white">
       <SEO
         title="Contact Us — Glendale & Burbank HVAC"
         description="Contact Static Mechanical for same-day HVAC service in Glendale, Burbank & Pasadena. Call 818-318-3032 or request a free quote online."
@@ -97,50 +97,53 @@ export default function Contact() {
       />
 
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="pt-16 pb-16 px-6">
+      <section className="px-6 pb-12 pt-16">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs text-gray-500 tracking-widest mb-3">START A PROJECT</p>
-          <h1 className="text-4xl md:text-5xl mb-14 max-w-xl">
+          <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">START A PROJECT</p>
+          <h1 className="mb-6 max-w-3xl text-[42px] font-medium leading-[1.04] tracking-[-0.025em] text-white md:text-[clamp(52px,5vw,64px)]">
             Let&rsquo;s get your comfort handled.
           </h1>
+          <p className="mb-12 max-w-2xl text-[17px] leading-relaxed text-gray-300">
+            Tell us what is happening with your system. We respond quickly during business hours and keep both partner lines available for urgent calls.
+          </p>
 
           <div className="grid sm:grid-cols-2 gap-8">
-            <div id="call" className="scroll-mt-24 pt-5 border-t border-gray-300">
-              <p className="text-xs text-gray-500 tracking-widest mb-2">CALL</p>
-              <a href={`tel:${PHONE}`} className="block text-2xl hover:text-brand-blue transition-colors">
+            <div id="call" className="scroll-mt-28 rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 backdrop-blur">
+              <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-gray-500">CALL</p>
+              <a href={`tel:${PHONE}`} className="block text-[24px] font-semibold leading-snug text-white transition-colors hover:text-brand-blue">
                 {PHONE} <span aria-hidden="true">&gt;</span>
               </a>
-              <a href={`tel:${PHONE_ALT}`} className="block text-2xl hover:text-brand-blue transition-colors mt-1">
+              <a href={`tel:${PHONE_ALT}`} className="mt-2 block text-[22px] font-medium leading-snug text-gray-300 transition-colors hover:text-brand-blue">
                 {PHONE_ALT} <span aria-hidden="true">&gt;</span>
               </a>
             </div>
-            <a href={`mailto:${EMAIL}`} className="block pt-5 border-t border-gray-300 group">
-              <p className="text-xs text-gray-500 tracking-widest mb-2">EMAIL</p>
-              <p className="text-2xl group-hover:text-brand-blue transition-colors break-all">{EMAIL} <span aria-hidden="true">&gt;</span></p>
+            <a href={`mailto:${EMAIL}`} className="group block rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 backdrop-blur">
+              <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-gray-500">EMAIL</p>
+              <p className="break-all text-[22px] font-semibold leading-snug text-white transition-colors group-hover:text-brand-blue md:text-2xl">{EMAIL} <span aria-hidden="true">&gt;</span></p>
             </a>
           </div>
         </div>
       </section>
 
       {/* ─── FORM + DETAILS ───────────────────────────────────────────────── */}
-      <section className="pb-24 px-6">
+      <section className="pb-28 px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10">
           <aside className="lg:col-span-2 space-y-4">
-            <div className="bg-white border border-gray-200 rounded p-6">
-              <h2 className="mb-4">Hours</h2>
+            <div className="rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 text-white backdrop-blur">
+              <h2 className="mb-5 text-[24px] font-semibold">Hours</h2>
               <dl className="space-y-2.5">
                 {hours.map(([day, time]) => (
-                  <div key={day} className="flex justify-between text-sm">
-                    <dt className="text-gray-500">{day}</dt>
-                    <dd className="font-medium">{time}</dd>
+                  <div key={day} className="flex justify-between gap-4 text-[15px]">
+                    <dt className="text-gray-300">{day}</dt>
+                    <dd className="font-medium text-gray-100">{time}</dd>
                   </div>
                 ))}
               </dl>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded p-6">
-              <p className="font-medium mb-1">Service Area</p>
-              <p className="text-sm text-gray-500">
+            <div className="rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 text-white backdrop-blur">
+              <p className="mb-2 text-[24px] font-semibold">Service Area</p>
+              <p className="text-[15px] leading-relaxed text-gray-300">
                 Los Angeles, Glendale, Burbank, Pasadena, East Los Angeles, San Fernando &amp; the
                 San Fernando Valley, CA
               </p>
@@ -150,57 +153,46 @@ export default function Contact() {
               href={YELP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between bg-white border border-gray-200 rounded p-6 hover:border-gray-400 transition-colors"
+              className="flex items-center justify-between rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 text-white backdrop-blur transition-colors hover:border-brand-blue/60"
             >
-              <span className="font-medium">Read our Yelp reviews</span>
+              <span className="font-semibold">Read our Yelp reviews</span>
               <span aria-hidden="true">&gt;</span>
             </a>
 
-            <div className="bg-ink text-white rounded p-6">
-              <p className="font-medium mb-1">HVAC emergency?</p>
-              <p className="text-sm text-gray-400 mb-4">Don&rsquo;t wait — call either number now.</p>
-              <div className="space-y-1">
-                <a href={`tel:${PHONE}`} className="block text-lg text-white hover:text-brand-blue transition-colors">
-                  {PHONE} <span aria-hidden="true">&gt;</span>
-                </a>
-                <a href={`tel:${PHONE_ALT}`} className="block text-lg text-white hover:text-brand-blue transition-colors">
-                  {PHONE_ALT} <span aria-hidden="true">&gt;</span>
-                </a>
-              </div>
+            <div className="rounded border border-white/10 bg-brand-blue text-white p-6">
+              <p className="mb-1 text-[24px] font-semibold">HVAC emergency?</p>
+              <p className="text-[15px] leading-relaxed text-white/85">Use the call options at the top of this page for urgent service.</p>
             </div>
           </aside>
 
           {/* Form */}
-          <div className="lg:col-span-3 bg-white border border-gray-200 rounded p-8">
-            <h2 className="text-2xl mb-2">Request a quote or service</h2>
-            <p className="text-gray-500 text-sm mb-7">
+          <div className="rounded border border-line bg-[rgba(11,16,23,0.82)] p-8 text-white backdrop-blur md:p-10 lg:col-span-3">
+            <h2 className="mb-2 text-[26px] font-semibold leading-tight md:text-[32px]">Request a quote or service</h2>
+            <p className="mb-7 text-[15px] leading-relaxed text-gray-300">
               Fill in your details and we&rsquo;ll get back to you within 1 hour during business hours.
             </p>
 
             {submitted ? (
               <div className="text-center py-14" role="alert" aria-live="polite">
-                <h3 className="text-2xl mb-3">Thank you!</h3>
-                <p className="text-gray-600 mb-6">
+                <h3 className="mb-3 text-[26px] font-semibold">Thank you!</h3>
+                <p className="text-gray-300 mb-6">
                   We&rsquo;ve received your request and will be in touch shortly.
                 </p>
-                <p className="text-gray-500 text-sm">
-                  For urgent service, call us directly at{' '}
-                  <a href={`tel:${PHONE}`} className="text-brand-blue">{PHONE}</a>
-                  {' '}or{' '}
-                  <a href={`tel:${PHONE_ALT}`} className="text-brand-blue">{PHONE_ALT}</a>.
+                <p className="text-gray-400 text-sm">
+                  For urgent service, use the call options at the top of this page.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate aria-label="Service request form" className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1.5">
+                <label htmlFor="name" className="mb-1.5 block text-[14px] font-medium text-gray-300">
                     Full Name <span className="text-brand-red" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="name" type="text" name="name" required
                     value={form.name} onChange={handleChange}
                     aria-required="true" aria-invalid={!!errors.name}
-                    className={`w-full border rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue transition-shadow ${errors.name ? 'border-red-400' : 'border-gray-300'}`}
+                    className={`w-full rounded border bg-white/5 px-4 py-3 text-base text-white placeholder:text-[#7F8A96] transition-shadow focus:outline-none focus:ring-2 focus:ring-[#93C5FD] ${errors.name ? 'border-red-400' : 'border-white/20'}`}
                     placeholder="John Smith"
                     autoComplete="name"
                   />
@@ -209,25 +201,25 @@ export default function Contact() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-1.5">
+                    <label htmlFor="phone" className="mb-1.5 block text-[14px] font-medium text-gray-300">
                       Phone <span className="text-brand-red" aria-hidden="true">*</span>
                     </label>
                     <input
-                      id="phone" type="tel" name="phone" required
-                      value={form.phone} onChange={handleChange}
-                      aria-required="true" aria-invalid={!!errors.phone}
-                      className={`w-full border rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue transition-shadow ${errors.phone ? 'border-red-400' : 'border-gray-300'}`}
+                    id="phone" type="tel" name="phone" required
+                    value={form.phone} onChange={handleChange}
+                    aria-required="true" aria-invalid={!!errors.phone}
+                      className={`w-full rounded border bg-white/5 px-4 py-3 text-base text-white placeholder:text-[#7F8A96] transition-shadow focus:outline-none focus:ring-2 focus:ring-[#93C5FD] ${errors.phone ? 'border-red-400' : 'border-white/20'}`}
                       placeholder="(818) 000-0000"
                       autoComplete="tel"
                     />
                     {errors.phone && <p className="text-red-500 text-xs mt-1" role="alert">{errors.phone}</p>}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
+                    <label htmlFor="email" className="mb-1.5 block text-[14px] font-medium text-gray-300">Email</label>
                     <input
                       id="email" type="email" name="email"
                       value={form.email} onChange={handleChange}
-                      className="w-full border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue transition-shadow"
+                      className="w-full rounded border border-white/20 bg-white/5 px-4 py-3 text-base text-white placeholder:text-[#7F8A96] transition-shadow focus:outline-none focus:ring-2 focus:ring-[#93C5FD]"
                       placeholder="you@email.com"
                       autoComplete="email"
                     />
@@ -235,11 +227,11 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium mb-1.5">Service Needed</label>
+                  <label htmlFor="service" className="mb-1.5 block text-[14px] font-medium text-gray-300">Service Needed</label>
                   <select
                     id="service" name="service"
                     value={form.service} onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue bg-white"
+                    className="w-full rounded border border-white/20 bg-ink px-4 py-3 text-base text-white focus:outline-none focus:ring-2 focus:ring-[#93C5FD]"
                   >
                     <option value="">Please select a service</option>
                     {SERVICE_OPTIONS.map(opt => <option key={opt} value={opt}>{opt}</option>)}
@@ -247,13 +239,13 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="message" className="mb-1.5 block text-[14px] font-medium text-gray-300">
                     Describe the Problem <span className="text-gray-400 font-normal">(optional)</span>
                   </label>
                   <textarea
                     id="message" name="message" rows={4}
                     value={form.message} onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue resize-none transition-shadow"
+                    className="w-full resize-none rounded border border-white/20 bg-white/5 px-4 py-3 text-base text-white placeholder:text-[#7F8A96] transition-shadow focus:outline-none focus:ring-2 focus:ring-[#93C5FD]"
                     placeholder="E.g. My AC is not cooling, it makes a rattling sound..."
                   />
                 </div>
@@ -267,11 +259,11 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="w-full bg-brand-blue text-white text-sm py-4 rounded hover:bg-brand-blue-lt transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="min-h-[52px] w-full rounded bg-brand-blue text-base font-semibold text-white transition-colors hover:bg-brand-blue-lt active:bg-[#1D4ED8] disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {sending ? 'Sending...' : 'Submit Request'}
                 </button>
-                <p className="text-xs text-gray-500 text-center">
+                <p className="text-center text-[13px] text-gray-500">
                   We respond within 1 hour during business hours. For emergencies, call either number above.
                 </p>
               </form>

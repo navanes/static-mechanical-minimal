@@ -21,16 +21,16 @@ export default function TestimonialsSection() {
   return (
     <section className="py-24 px-6 border-t border-line" aria-labelledby="reviews-heading">
       <div className="max-w-6xl mx-auto">
-        <p className="text-xs text-gray-500 tracking-widest mb-3">WHAT CLIENTS SAY</p>
-        <h2 id="reviews-heading" className="text-3xl text-white mb-12">Verified feedback.</h2>
+        <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">WHAT CLIENTS SAY</p>
+        <h2 id="reviews-heading" className="mb-12 text-[clamp(32px,3vw,42px)] font-medium leading-tight text-white">Verified feedback.</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {reviews.map((r) => (
             <article key={r.name} className="pt-6 border-t border-line">
-              <blockquote className="text-gray-400 text-sm leading-relaxed">
+              <blockquote className="text-[15px] leading-relaxed text-gray-300">
                 &ldquo;{r.text}&rdquo;
               </blockquote>
-              <footer className="mt-4 text-sm">
-                <cite className="not-italic text-white">{r.name}</cite>
+              <footer className="mt-4 text-[13px]">
+                <cite className="not-italic font-medium text-white">{r.name}</cite>
                 <span className="text-gray-500"> &mdash; {r.location}</span>
               </footer>
             </article>

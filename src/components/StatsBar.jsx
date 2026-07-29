@@ -10,8 +10,8 @@ export default function StatsBar() {
       <div className="max-w-6xl mx-auto grid sm:grid-cols-3 gap-8">
         {facts.map((f) => (
           <div key={f.value} className="pt-6 border-t border-line">
-            <p className="text-2xl text-white">{f.value}</p>
-            <p className="text-xs text-gray-500 tracking-widest mt-1">{f.label}</p>
+            <p className="text-[26px] font-medium leading-tight text-white">{f.value}</p>
+            <p className="mt-2 text-xs font-semibold tracking-[0.16em] text-gray-500">{f.label}</p>
           </div>
         ))}
       </div>

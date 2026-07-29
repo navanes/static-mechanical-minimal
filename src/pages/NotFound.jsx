@@ -21,13 +21,13 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/"
-              className="border border-line text-white text-sm px-7 py-3 rounded hover:border-white/30 transition-colors"
+              className="rounded bg-brand-blue px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-blue-lt active:bg-[#1D4ED8]"
             >
               &larr; Back to Home
             </Link>
             <a
               href={`tel:${PHONE}`}
-              className="bg-brand-blue text-white text-sm px-7 py-3 rounded hover:bg-brand-blue-lt transition-colors"
+              className="rounded bg-brand-blue px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-blue-lt active:bg-[#1D4ED8]"
             >
               Call {PHONE}
             </a>

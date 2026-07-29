@@ -95,8 +95,8 @@ export default function Services() {
       {/* ─── HERO / NUMBERED LIST ─────────────────────────────────────────── */}
       <section className="pt-16 pb-24 px-6" aria-label="Page header">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs text-gray-500 tracking-widest mb-3">SERVICES</p>
-          <h1 className="text-4xl md:text-5xl text-white mb-16 max-w-lg">
+          <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">SERVICES</p>
+          <h1 className="mb-16 max-w-xl text-[42px] font-medium leading-[1.05] tracking-[-0.025em] text-white md:text-[clamp(52px,5vw,72px)]">
             Built around your space.
           </h1>
 
@@ -105,12 +105,12 @@ export default function Services() {
               <a
                 key={c.num}
                 href={`#${c.id}`}
-                className="group flex items-center gap-6 py-6 border-t border-line last:border-b hover:bg-white/[0.02] transition-colors -mx-6 px-6"
+                className="group flex items-center gap-8 py-7 border-t border-white/10 last:border-b hover:bg-white/[0.025] transition-colors -mx-6 px-6"
               >
-                <span className="text-brand-red text-xs w-6 shrink-0">{c.num}</span>
-                <span className="text-2xl md:text-3xl text-white w-48 md:w-64 shrink-0">{c.title}</span>
-                <span className="hidden md:block text-sm text-gray-500 flex-1">{c.desc}</span>
-                <span className="w-9 h-9 rounded-full border border-line flex items-center justify-center text-gray-400 group-hover:border-white/30 group-hover:text-white transition-colors shrink-0" aria-hidden="true">
+                <span className="w-6 shrink-0 text-[13px] font-semibold text-brand-red">{c.num}</span>
+                <span className="w-48 shrink-0 text-[26px] font-semibold leading-tight text-white md:w-64 md:text-[32px]">{c.title}</span>
+                <span className="hidden flex-1 text-base leading-relaxed text-gray-300 md:block">{c.desc}</span>
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-gray-400 transition-colors group-hover:border-white/30 group-hover:text-white" aria-hidden="true">
                   &gt;
                 </span>
               </a>
@@ -128,17 +128,17 @@ export default function Services() {
                 <ScrollGrowImg src={s.img} alt={s.alt} className="w-full h-72 md:h-96 object-cover" />
               </div>
               <div className="md:w-1/2">
-                <p className="text-xs text-gray-500 tracking-widest mb-3">{s.label}</p>
-                <h2 className="text-3xl md:text-4xl text-white mb-5">{s.heading}</h2>
-                <p className="text-gray-400 mb-8 leading-relaxed">{s.intro}</p>
+                <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">{s.label}</p>
+                <h2 className="mb-5 text-[clamp(32px,3vw,44px)] font-medium leading-tight text-white">{s.heading}</h2>
+                <p className="mb-8 text-[17px] leading-relaxed text-gray-300">{s.intro}</p>
 
                 <div className="space-y-6 mb-8">
                   {s.items.map((item) => (
                     <div key={item.title} className="pt-5 border-t border-line">
-                      <h3 className="text-white mb-3">{item.title}</h3>
+                      <h3 className="mb-3 text-[24px] font-semibold leading-tight text-white md:text-[30px]">{item.title}</h3>
                       <ul className="space-y-1.5">
                         {item.bullets.map((b) => (
-                          <li key={b} className="text-sm text-gray-500 flex gap-2">
+                          <li key={b} className="flex gap-2 text-base leading-relaxed text-gray-300">
                             <span className="text-brand-red" aria-hidden="true">&middot;</span>{b}
                           </li>
                         ))}
@@ -147,7 +147,7 @@ export default function Services() {
                   ))}
                 </div>
 
-                <a href={`tel:${PHONE}`} className="inline-flex items-center gap-2 text-sm text-white border border-line rounded px-6 py-3 hover:border-white/30 transition-colors">
+                <a href={`tel:${PHONE}`} className="inline-flex min-h-[54px] items-center gap-2 rounded bg-brand-blue px-7 text-base font-semibold text-white transition-colors hover:bg-brand-blue-lt active:bg-[#1D4ED8]">
                   Call {PHONE} <span aria-hidden="true">&gt;</span>
                 </a>
               </div>
@@ -159,13 +159,13 @@ export default function Services() {
       {/* ─── FAQ ──────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 border-t border-line" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs text-gray-500 tracking-widest mb-3">FAQ</p>
-          <h2 id="faq-heading" className="text-4xl text-white mb-12">Common questions.</h2>
+          <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">FAQ</p>
+          <h2 id="faq-heading" className="mb-12 text-[clamp(36px,4vw,52px)] font-medium leading-tight text-white">Common questions.</h2>
           <dl>
             {faqs.map((faq) => (
               <div key={faq.q} className="py-6 border-t border-line last:border-b">
-                <dt className="text-white mb-2">{faq.q}</dt>
-                <dd className="text-gray-500 text-sm leading-relaxed">{faq.a}</dd>
+                <dt className="mb-2 text-[18px] font-semibold text-white">{faq.q}</dt>
+                <dd className="text-[15px] leading-relaxed text-gray-300">{faq.a}</dd>
               </div>
             ))}
           </dl>

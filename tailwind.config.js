@@ -8,16 +8,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          red:      '#DF231E',
-          'red-lt': '#E74D49',
+          red:      '#e63232',
+          'red-lt': '#ef5353',
           'red-dk': '#BB1D19',
-          blue:     '#3B6FF6',
-          'blue-lt':'#5A8AFF',
+          blue:     '#2f63d8',
+          'blue-lt':'#3b73ec',
         },
         // Industrial-noir dark theme
-        ink:      '#0B0E14',
-        surface:  '#12161F',
-        line:     'rgba(255,255,255,0.09)',
+        ink:      '#05080d',
+        surface:  '#0b1017',
+        line:     'rgba(255,255,255,0.16)',
         // Light theme (contact page)
         paper:    '#EEF1F4',
       },

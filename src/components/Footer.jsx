@@ -10,7 +10,7 @@ const LICENSE_NO = '1092530';
 const LINKS = [
   { to: '/services', label: 'Services' },
   { to: '/projects', label: 'Projects' },
-  { to: '/about', label: 'About' },
+  { to: '/about', label: 'About Us' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -18,14 +18,14 @@ const areas = ['Los Angeles', 'Glendale', 'Burbank', 'Pasadena', 'East Los Angel
 
 export default function Footer() {
   return (
-    <footer className="bg-ink border-t border-line">
-      <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
+    <footer className="border-t border-line bg-[#080B11]">
+      <div className="max-w-6xl mx-auto grid gap-12 px-6 py-20 md:grid-cols-4">
         {/* Brand */}
         <div className="md:col-span-2">
           <Link to="/" aria-label="Static Mechanical Inc. — Home">
             <Logo size={36} />
           </Link>
-          <p className="text-sm text-gray-500 leading-relaxed mt-5 max-w-sm">
+          <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-gray-300">
             Commercial + residential HVAC contractor serving {areas.join(', ')}, and the greater
             San Fernando Valley. Licensed, bonded, and insured.
           </p>
@@ -33,11 +33,11 @@ export default function Footer() {
 
         {/* Links */}
         <div>
-          <p className="text-xs text-gray-500 tracking-widest mb-4">NAVIGATE</p>
+          <p className="mb-5 text-xs font-semibold tracking-[0.14em] text-gray-500">NAVIGATE</p>
           <ul className="space-y-3">
             {LINKS.map(({ to, label }) => (
               <li key={to}>
-                <Link to={to} className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to={to} className="text-[15px] text-gray-300 transition-colors hover:text-white">
                   {label}
                 </Link>
               </li>
@@ -47,25 +47,25 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <p className="text-xs text-gray-500 tracking-widest mb-4">CONTACT</p>
+          <p className="mb-5 text-xs font-semibold tracking-[0.14em] text-gray-500">CONTACT</p>
           <ul className="space-y-3">
             <li>
-              <a href={`tel:${PHONE}`} className="text-sm text-white hover:text-brand-blue transition-colors">
+              <a href={`tel:${PHONE}`} className="text-[15px] font-medium text-white transition-colors hover:text-brand-blue">
                 {PHONE}
               </a>
             </li>
             <li>
-              <a href={`tel:${PHONE_ALT}`} className="text-sm text-white hover:text-brand-blue transition-colors">
+              <a href={`tel:${PHONE_ALT}`} className="text-[15px] font-medium text-white transition-colors hover:text-brand-blue">
                 {PHONE_ALT}
               </a>
             </li>
             <li>
-              <a href={`mailto:${EMAIL}`} className="text-sm text-gray-400 hover:text-white transition-colors break-all">
+              <a href={`mailto:${EMAIL}`} className="break-all text-[15px] text-gray-300 transition-colors hover:text-white">
                 {EMAIL}
               </a>
             </li>
             <li>
-              <a href={YELP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
+              <a href={YELP_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] text-gray-300 transition-colors hover:text-white">
                 Yelp Reviews
               </a>
             </li>
@@ -74,7 +74,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-line">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+        <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-2 px-6 py-5 text-[13px] text-gray-500 sm:flex-row">
           <p>LIC #{LICENSE_NO} · Glendale, California</p>
           <p>© 2026 Static Mechanical Inc.</p>
         </div>

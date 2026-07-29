@@ -36,11 +36,11 @@ export default function About() {
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
       <section className="pt-16 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs text-gray-500 tracking-widest mb-3">WHY STATIC</p>
-          <h1 className="text-4xl md:text-5xl text-white mb-10 max-w-xl">
+          <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">WHY STATIC</p>
+          <h1 className="mb-10 max-w-2xl text-[42px] font-medium leading-[1.04] tracking-[-0.025em] text-white md:text-[clamp(52px,5vw,64px)]">
             Mechanical work,<br />done thoughtfully.
           </h1>
-          <p className="text-gray-400 leading-relaxed max-w-lg">
+          <p className="max-w-xl text-[17px] leading-relaxed text-gray-300">
             We believe good service should feel simple. You get direct communication, honest
             recommendations, and work completed with care — without pressure or unnecessary noise.
           </p>
@@ -53,16 +53,16 @@ export default function About() {
       <section className="py-24 px-6 border-t border-line">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
           <div>
-            <p className="text-xs text-gray-500 tracking-widest mb-3">OUR STORY</p>
-            <h2 className="text-3xl text-white mb-6">Built on trust, backed by experience.</h2>
-            <p className="text-gray-400 mb-4 leading-relaxed">
+            <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">OUR STORY</p>
+            <h2 className="mb-6 text-[30px] font-medium leading-tight text-white md:text-4xl">Built on trust, backed by experience.</h2>
+            <p className="mb-4 text-[16px] leading-[1.65] text-gray-300 md:text-[17px]">
               Static Mechanical Inc. was founded with one mission: provide the kind of honest,
               high-quality HVAC contracting that homeowners and businesses in Glendale, Burbank,
               Pasadena, and greater Los Angeles couldn't easily find. No bait-and-switch pricing,
               no scare tactics — just skilled crews who fix the problem and treat every property
               with respect.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-[16px] leading-[1.65] text-gray-300 md:text-[17px]">
               From single-family furnace repairs to full commercial rooftop change-outs
               coordinated with crane crews, we bring the same standard of workmanship to every
               job across the San Fernando Valley.
@@ -81,12 +81,12 @@ export default function About() {
       {/* ─── REASONS ──────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 border-t border-line" aria-labelledby="reasons-heading">
         <div className="max-w-6xl mx-auto">
-          <h2 id="reasons-heading" className="text-3xl text-white mb-12">What sets us apart.</h2>
+          <h2 id="reasons-heading" className="mb-12 text-[clamp(36px,4vw,48px)] font-medium leading-tight text-white">What sets us apart.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
             {reasons.map((r) => (
               <div key={r.title} className="pt-5 border-t border-line">
-                <h3 className="text-white mb-2">{r.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{r.desc}</p>
+                <h3 className="mb-2 text-[19px] font-semibold text-white">{r.title}</h3>
+                <p className="text-[15px] leading-relaxed text-gray-300">{r.desc}</p>
               </div>
             ))}
           </div>
@@ -96,8 +96,8 @@ export default function About() {
       {/* ─── GALLERY ──────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 border-t border-line" aria-labelledby="work-heading">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs text-gray-500 tracking-widest mb-3">REAL JOBS, REAL RESULTS</p>
-          <h2 id="work-heading" className="text-3xl text-white mb-12">Our work in action.</h2>
+          <p className="mb-4 text-xs font-semibold tracking-[0.18em] text-gray-500">REAL JOBS, REAL RESULTS</p>
+          <h2 id="work-heading" className="mb-12 text-[clamp(36px,4vw,48px)] font-medium leading-tight text-white">Our work in action.</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {GALLERY.map((item) => (
               <div key={item.src} className="relative rounded overflow-hidden group" style={{ aspectRatio: '4/3' }}>
@@ -107,7 +107,7 @@ export default function About() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <p className="absolute bottom-2 left-3 right-3 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="absolute bottom-3 left-3 right-3 text-[13px] font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   {item.label}
                 </p>
               </div>

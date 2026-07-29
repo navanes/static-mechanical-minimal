@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-bg: #05080d;
+    --color-surface: #0b1017;
+    --color-surface-elevated: #111821;
+    --color-text-primary: #f1f3f5;
+    --color-text-secondary: #b4bcc6;
+    --color-text-muted: #828d9a;
+    --color-text-subtle: #68727e;
+    --color-primary: #2f63d8;
+    --color-primary-hover: #3b73ec;
+    --color-primary-active: #244faf;
+    --color-focus: #93c5fd;
+    --color-brand-red: #e63232;
+    --color-border: rgba(255, 255, 255, 0.16);
+    --color-border-hover: rgba(255, 255, 255, 0.32);
+    --color-border-strong: rgba(255, 255, 255, 0.24);
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -10,14 +28,63 @@
   }
 
   body {
-    font-family: Inter, system-ui, Arial, sans-serif;
-    color: #F5F6F8;
-    background-color: #0B0E14;
+    font-family: Inter, Geist, "Helvetica Neue", Arial, sans-serif;
+    color: var(--color-text-secondary);
+    background: var(--color-bg);
     min-width: 320px;
+    font-size: 17px;
+    line-height: 1.6;
   }
 
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-white {
+    color: var(--color-text-primary);
+  }
+
+  .text-gray-300 {
+    color: var(--color-text-secondary);
+  }
+
+  .text-gray-400,
+  .text-gray-500 {
+    color: var(--color-text-muted);
+  }
+
+  .cta-arrow {
+    display: inline-block;
+    height: 0.48em;
+    width: 0.48em;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 180ms ease;
+  }
+
+  .group:hover .cta-arrow,
+  a:hover .cta-arrow,
+  button:hover .cta-arrow {
+    transform: translateX(3px) rotate(45deg);
   }
 }
