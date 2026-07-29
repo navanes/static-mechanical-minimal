@@ -9,65 +9,77 @@ const PHONE = '818-318-3032';
 const PHONE_ALT = '818-699-7654';
 
 const services = [
-  { num: '01', title: 'Repair',       desc: 'Fast diagnostics and dependable repairs for every major HVAC system.', href: '/services#repair' },
-  { num: '02', title: 'Installation', desc: 'High-efficiency equipment selected, sized, and installed with precision.', href: '/services#installation' },
-  { num: '03', title: 'Commercial',   desc: 'Rooftop units, controls, airflow, and maintenance for active businesses.', href: '/services#commercial' },
+  { num: '01', title: 'Commercial',   desc: 'Rooftop units, controls, airflow, and maintenance for active businesses.', href: '/services#commercial' },
+  { num: '02', title: 'Repair',       desc: 'Fast diagnostics and dependable repairs for every major HVAC system.', href: '/services#repair' },
+  { num: '03', title: 'Installation', desc: 'High-efficiency equipment selected, sized, and installed with precision.', href: '/services#installation' },
   { num: '04', title: 'Maintenance',  desc: 'Practical preventive care that protects comfort and equipment life.', href: '/services#maintenance' },
 ];
 
 const work = [
-  { img: '/images/v2/project-crane-street.jpg', category: 'COMMERCIAL', title: 'Rooftop package unit replacement', location: 'GLENDALE, CA' },
-  { img: '/images/v2/project-condenser-row.jpg', category: 'RESIDENTIAL', title: 'High-efficiency comfort upgrade', location: 'BURBANK, CA' },
+  { img: '/images/v2/project-crane-street.jpg',   category: 'COMMERCIAL', title: 'Rooftop package unit replacement', location: 'GLENDALE, CA' },
+  { img: '/images/v2/project-mechanical-room.jpg', category: 'COMMERCIAL', title: 'Chiller plant mechanical room',     location: 'LOS ANGELES, CA' },
 ];
 
 export default function Home() {
   return (
     <>
       <SEO
-        title="HVAC Contractor in Glendale & Burbank, CA"
-        description="Static Mechanical Inc. — HVAC contractor serving Glendale, Burbank, Pasadena & the LA area. Same-day AC & heating repair. Licensed & insured. Call 818-318-3032."
+        title="Commercial & Residential HVAC — Glendale & Burbank, CA"
+        description="Static Mechanical Inc. — commercial & residential HVAC contractor serving Glendale, Burbank, Pasadena & the LA area. Same-day AC & heating repair. Licensed & insured. Call 818-318-3032."
         canonical="/"
       />
 
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="grid md:grid-cols-2" aria-label="Hero">
-        <div className="flex flex-col justify-center px-6 md:px-12 py-16 md:py-0 md:min-h-[80vh] order-2 md:order-1">
-          <p className="text-xs text-gray-500 tracking-widest mb-4">HVAC / LOS ANGELES</p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05] mb-6">
-            Comfort,<br />handled.
-          </h1>
-          <p className="text-gray-400 text-lg mb-8 max-w-md">
-            Residential + commercial HVAC across Los Angeles, Glendale, Burbank &amp; Pasadena.
-          </p>
+      <section
+        className="relative isolate min-h-screen overflow-hidden px-6 md:px-12"
+        aria-label="Hero"
+      >
+        <img
+          src="/images/v2/static-mechanical-homepage-hero.png"
+          alt=""
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[62%_center]"
+          loading="eager"
+          fetchPriority="high"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,8,13,0.88)_0%,rgba(5,8,13,0.66)_32%,rgba(5,8,13,0.18)_68%,rgba(5,8,13,0.08)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(5,8,13,0.18)_0%,rgba(5,8,13,0)_48%,rgba(5,8,13,0.58)_100%)]" />
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-3">
-            <a
-              href={`tel:${PHONE}`}
-              className="inline-flex items-center justify-center gap-2 bg-brand-blue text-white text-sm px-7 py-4 rounded hover:bg-brand-blue-lt transition-colors"
-              aria-label={`Call Static Mechanical at ${PHONE}`}
-            >
-              Call {PHONE} <span aria-hidden="true">&gt;</span>
-            </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 border border-line text-white text-sm px-7 py-4 rounded hover:border-white/30 transition-colors"
-            >
-              Get a Quote <span aria-hidden="true">&gt;</span>
-            </Link>
+        <div className="flex min-h-screen flex-col justify-center pt-32 pb-12 md:pt-36">
+          <div className="max-w-3xl">
+            <p className="text-xs text-gray-400 tracking-widest mb-4">HVAC / LOS ANGELES</p>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-[1.04] mb-6">
+              Comfort, handled.
+            </h1>
+            <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-xl">
+              Commercial + residential HVAC across Los Angeles, Glendale, Burbank &amp; Pasadena.
+            </p>
+
+            <div className="flex flex-wrap gap-4 mb-16">
+              <a
+                href={`tel:${PHONE}`}
+                className="inline-flex min-w-48 items-center justify-center gap-2 bg-brand-blue text-white text-sm px-7 py-4 rounded hover:bg-brand-blue-lt transition-colors"
+                aria-label={`Call Static Mechanical at ${PHONE}`}
+              >
+                Call {PHONE} <span aria-hidden="true">&gt;</span>
+              </a>
+              <a
+                href={`tel:${PHONE_ALT}`}
+                className="inline-flex min-w-48 items-center justify-center gap-2 bg-brand-blue text-white text-sm px-7 py-4 rounded hover:bg-brand-blue-lt transition-colors"
+                aria-label={`Call Static Mechanical at ${PHONE_ALT}`}
+              >
+                Call {PHONE_ALT} <span aria-hidden="true">&gt;</span>
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex min-w-44 items-center justify-center gap-2 border border-white/35 text-white text-sm px-7 py-4 rounded hover:border-white/70 transition-colors"
+              >
+                Get a Quote <span aria-hidden="true">&gt;</span>
+              </Link>
+            </div>
+
+            <TrustBar />
           </div>
-          <p className="text-xs text-gray-600 mb-8">or call {PHONE_ALT}</p>
-
-          <TrustBar />
-        </div>
-
-        <div className="order-1 md:order-2 h-[45vh] md:h-auto">
-          <Img
-            src="/images/v2/hero-rooftop-glass-dark.jpg"
-            alt="Static Mechanical Inc. — commercial rooftop HVAC package unit, Los Angeles, CA"
-            className="w-full h-full object-cover"
-            loading="eager"
-            fetchpriority="high"
-          />
         </div>
       </section>
 

@@ -26,7 +26,7 @@ export default function Footer() {
             <Logo size={36} />
           </Link>
           <p className="text-sm text-gray-500 leading-relaxed mt-5 max-w-sm">
-            Residential + commercial HVAC contractor serving {areas.join(', ')}, and the greater
+            Commercial + residential HVAC contractor serving {areas.join(', ')}, and the greater
             San Fernando Valley. Licensed, bonded, and insured.
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href={`tel:${PHONE_ALT}`} className="text-sm text-gray-400 hover:text-white transition-colors">
+              <a href={`tel:${PHONE_ALT}`} className="text-sm text-white hover:text-brand-blue transition-colors">
                 {PHONE_ALT}
               </a>
             </li>

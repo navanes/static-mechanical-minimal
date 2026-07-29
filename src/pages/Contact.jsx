@@ -27,8 +27,6 @@ const SERVICE_OPTIONS = [
 
 const hours = [
   ['Monday – Friday', '7:00 AM – 7:00 PM'],
-  ['Saturday',        '8:00 AM – 5:00 PM'],
-  ['Sunday',          'Emergency Calls Only'],
 ];
 
 export default function Contact() {
@@ -107,11 +105,15 @@ export default function Contact() {
           </h1>
 
           <div className="grid sm:grid-cols-2 gap-8">
-            <a href={`tel:${PHONE}`} className="block pt-5 border-t border-gray-300 group">
+            <div id="call" className="scroll-mt-24 pt-5 border-t border-gray-300">
               <p className="text-xs text-gray-500 tracking-widest mb-2">CALL</p>
-              <p className="text-2xl group-hover:text-brand-blue transition-colors">{PHONE} <span aria-hidden="true">&gt;</span></p>
-              <p className="text-sm text-gray-500 mt-1">{PHONE_ALT}</p>
-            </a>
+              <a href={`tel:${PHONE}`} className="block text-2xl hover:text-brand-blue transition-colors">
+                {PHONE} <span aria-hidden="true">&gt;</span>
+              </a>
+              <a href={`tel:${PHONE_ALT}`} className="block text-2xl hover:text-brand-blue transition-colors mt-1">
+                {PHONE_ALT} <span aria-hidden="true">&gt;</span>
+              </a>
+            </div>
             <a href={`mailto:${EMAIL}`} className="block pt-5 border-t border-gray-300 group">
               <p className="text-xs text-gray-500 tracking-widest mb-2">EMAIL</p>
               <p className="text-2xl group-hover:text-brand-blue transition-colors break-all">{EMAIL} <span aria-hidden="true">&gt;</span></p>
@@ -156,10 +158,15 @@ export default function Contact() {
 
             <div className="bg-ink text-white rounded p-6">
               <p className="font-medium mb-1">HVAC emergency?</p>
-              <p className="text-sm text-gray-400 mb-4">Don&rsquo;t wait — call us now.</p>
-              <a href={`tel:${PHONE}`} className="text-lg text-white hover:text-brand-blue transition-colors">
-                {PHONE} <span aria-hidden="true">&gt;</span>
-              </a>
+              <p className="text-sm text-gray-400 mb-4">Don&rsquo;t wait — call either number now.</p>
+              <div className="space-y-1">
+                <a href={`tel:${PHONE}`} className="block text-lg text-white hover:text-brand-blue transition-colors">
+                  {PHONE} <span aria-hidden="true">&gt;</span>
+                </a>
+                <a href={`tel:${PHONE_ALT}`} className="block text-lg text-white hover:text-brand-blue transition-colors">
+                  {PHONE_ALT} <span aria-hidden="true">&gt;</span>
+                </a>
+              </div>
             </div>
           </aside>
 
@@ -178,7 +185,9 @@ export default function Contact() {
                 </p>
                 <p className="text-gray-500 text-sm">
                   For urgent service, call us directly at{' '}
-                  <a href={`tel:${PHONE}`} className="text-brand-blue">{PHONE}</a>.
+                  <a href={`tel:${PHONE}`} className="text-brand-blue">{PHONE}</a>
+                  {' '}or{' '}
+                  <a href={`tel:${PHONE_ALT}`} className="text-brand-blue">{PHONE_ALT}</a>.
                 </p>
               </div>
             ) : (
@@ -263,7 +272,7 @@ export default function Contact() {
                   {sending ? 'Sending...' : 'Submit Request'}
                 </button>
                 <p className="text-xs text-gray-500 text-center">
-                  We respond within 1 hour during business hours. For emergencies, call {PHONE}.
+                  We respond within 1 hour during business hours. For emergencies, call either number above.
                 </p>
               </form>
             )}

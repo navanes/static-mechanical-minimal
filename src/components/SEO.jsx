@@ -7,7 +7,7 @@ const DOMAIN = 'https://staticmechanicalinc.com';
 // Short form for title/description defaults — Google truncates titles past ~60 chars
 // and descriptions past ~155, so these must stay compact.
 const SHORT_AREA = 'Glendale, Burbank & LA, CA';
-const OG_IMAGE = `${DOMAIN}/images/v2/hero-rooftop-glass-dark.jpg`;
+const OG_IMAGE = `${DOMAIN}/images/v2/hero-homepage.jpg`;
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
 
 const schemaJSON = JSON.stringify({
@@ -21,7 +21,6 @@ const schemaJSON = JSON.stringify({
   priceRange: '$$',
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '19:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday'], opens: '08:00', closes: '17:00' },
   ],
   address: {
     '@type': 'PostalAddress',
@@ -76,8 +75,8 @@ export default function SEO({ title, description, canonical, breadcrumb }) {
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:image" content={OG_IMAGE} />
-      <meta property="og:image:width" content="2000" />
-      <meta property="og:image:height" content="1500" />
+      <meta property="og:image:width" content="1606" />
+      <meta property="og:image:height" content="979" />
       <meta property="og:image:alt" content="Static Mechanical Inc. — Los Angeles HVAC Contractor" />
 
       {/* Twitter Card */}

@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from './Logo';
-
-const PHONE = '818-318-3032';
 
 const LINKS = [
   { to: '/services', label: 'Services' },
@@ -13,10 +11,12 @@ const LINKS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
 
   return (
-    <header className="sticky top-0 z-50 bg-ink/90 backdrop-blur-sm border-b border-line">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
+    <header className={`${isHome ? 'absolute bg-transparent border-transparent' : 'sticky bg-ink/90 backdrop-blur-sm border-line'} top-0 z-50 w-full border-b`}>
+      <div className={`${isHome ? 'px-6 md:px-12' : 'max-w-6xl mx-auto px-6'} flex items-center justify-between h-20`}>
         <Link to="/" aria-label="Static Mechanical Inc. — Home" onClick={() => setOpen(false)}>
           <Logo size={40} />
         </Link>
@@ -36,12 +36,12 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a
-          href={`tel:${PHONE}`}
+        <Link
+          to="/contact#call"
           className="hidden md:inline-flex items-center gap-2 text-sm text-white border border-line rounded-full px-5 py-2.5 hover:border-white/30 transition-colors"
         >
-          {PHONE}
-        </a>
+          Call us
+        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -61,7 +61,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="md:hidden border-t border-line" aria-label="Mobile navigation">
+        <nav className="md:hidden border-t border-line bg-ink/95 backdrop-blur-sm" aria-label="Mobile navigation">
           <ul className="max-w-6xl mx-auto px-6 py-2" role="list">
             {LINKS.map(({ to, label }) => (
               <li key={to}>
@@ -77,12 +77,13 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <a
-                href={`tel:${PHONE}`}
+              <Link
+                to="/contact#call"
                 className="block py-4 text-base text-white font-medium"
+                onClick={() => setOpen(false)}
               >
-                Call {PHONE}
-              </a>
+                Call us
+              </Link>
             </li>
           </ul>
         </nav>

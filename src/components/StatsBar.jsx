@@ -1,7 +1,7 @@
 const facts = [
   { value: 'Same day',  label: 'SERVICE AVAILABLE' },
   { value: 'Licensed',  label: 'BONDED + INSURED' },
-  { value: 'Residential', label: '+ COMMERCIAL' },
+  { value: 'Commercial', label: '+ RESIDENTIAL' },
 ];
 
 export default function StatsBar() {

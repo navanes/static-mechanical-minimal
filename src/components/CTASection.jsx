@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const PHONE = '818-318-3032';
+const PHONE_ALT = '818-699-7654';
 
 export default function CTASection({
   heading = "Let's get your comfort handled.",
@@ -13,13 +14,20 @@ export default function CTASection({
           {heading}
         </h2>
         <p className="text-gray-500 mb-8 max-w-lg">{sub}</p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-wrap gap-4">
           <a
             href={`tel:${PHONE}`}
             className="inline-flex items-center justify-center gap-2 bg-brand-blue text-white text-sm px-7 py-4 rounded hover:bg-brand-blue-lt transition-colors"
             aria-label={`Call Static Mechanical at ${PHONE}`}
           >
             Call {PHONE} <span aria-hidden="true">&gt;</span>
+          </a>
+          <a
+            href={`tel:${PHONE_ALT}`}
+            className="inline-flex items-center justify-center gap-2 bg-brand-blue text-white text-sm px-7 py-4 rounded hover:bg-brand-blue-lt transition-colors"
+            aria-label={`Call Static Mechanical at ${PHONE_ALT}`}
+          >
+            Call {PHONE_ALT} <span aria-hidden="true">&gt;</span>
           </a>
           <Link
             to="/contact"

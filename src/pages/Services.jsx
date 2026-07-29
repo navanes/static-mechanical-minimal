@@ -6,16 +6,28 @@ import SEO from '../components/SEO';
 const PHONE = '818-318-3032';
 
 const categories = [
-  { num: '01', id: 'repair',       title: 'Repair',       desc: 'Fast diagnostics and dependable repairs for every major HVAC system.' },
-  { num: '02', id: 'installation', title: 'Installation', desc: 'High-efficiency equipment selected, sized, and installed with precision.' },
-  { num: '03', id: 'commercial',   title: 'Commercial',   desc: 'Rooftop units, controls, airflow, and maintenance for active businesses.' },
+  { num: '01', id: 'commercial',   title: 'Commercial',   desc: 'Rooftop units, controls, airflow, and maintenance for active businesses.' },
+  { num: '02', id: 'repair',       title: 'Repair',       desc: 'Fast diagnostics and dependable repairs for every major HVAC system.' },
+  { num: '03', id: 'installation', title: 'Installation', desc: 'High-efficiency equipment selected, sized, and installed with precision.' },
   { num: '04', id: 'maintenance',  title: 'Maintenance',  desc: 'Practical preventive care that protects comfort and equipment life.' },
 ];
 
 const sections = [
   {
+    id: 'commercial',
+    label: '01 / COMMERCIAL',
+    heading: 'Built for active businesses.',
+    intro: "From rooftop package units to mechanical rooms and cooling towers, we work on the equipment that keeps a business running. Crane-lifted installs, controls, airflow balancing, and scheduled maintenance — coordinated to minimize disruption to your tenants or operations.",
+    img: '/images/v2/project-mechanical-room.jpg',
+    alt: 'Commercial mechanical room with chiller and piping — Los Angeles, CA',
+    items: [
+      { title: 'Rooftop Package Units', bullets: ['Crane-coordinated equipment delivery', 'Multi-unit condenser row installs', 'Carrier, York, Trane commercial equipment'] },
+      { title: 'Mechanical Rooms & Controls', bullets: ['Chillers, cooling towers, boilers', 'Building controls & scheduling', 'Preventive maintenance contracts'] },
+    ],
+  },
+  {
     id: 'repair',
-    label: '01 / REPAIR',
+    label: '02 / REPAIR',
     heading: 'Fast, honest repairs.',
     intro: "A broken system in the Los Angeles heat — or a cold night with no heat — is no small problem. Our technicians respond fast and come equipped to diagnose the issue correctly the first time, with an upfront price before any work begins.",
     img: '/images/service-ac.jpg',
@@ -27,7 +39,7 @@ const sections = [
   },
   {
     id: 'installation',
-    label: '02 / INSTALLATION',
+    label: '03 / INSTALLATION',
     heading: 'Sized right, installed with precision.',
     intro: "Whether it's a smart thermostat, a ductless mini split, or a full system change-out, proper sizing and installation is what separates a system that lasts from one that doesn't. We handle the full project — old equipment removal, new installation, and testing.",
     img: '/images/v2/project-crane-street.jpg',
@@ -36,18 +48,6 @@ const sections = [
       { title: 'Full System Change-Outs', bullets: ['Load calculation & proper system sizing', 'All major brands available', 'Utility rebates & financing assistance'] },
       { title: 'Mini Split Systems', bullets: ['Single & multi-zone installations', 'Mitsubishi, Daikin, LG, Samsung', 'Perfect for additions & rooms without ductwork'] },
       { title: 'Smart Thermostats', bullets: ['Nest, Ecobee, Honeywell installation', 'Can cut energy bills 15–20%', 'Wi-Fi & app setup included'] },
-    ],
-  },
-  {
-    id: 'commercial',
-    label: '03 / COMMERCIAL',
-    heading: 'Built for active businesses.',
-    intro: "From rooftop package units to mechanical rooms and cooling towers, we work on the equipment that keeps a business running. Crane-lifted installs, controls, airflow balancing, and scheduled maintenance — coordinated to minimize disruption to your tenants or operations.",
-    img: '/images/v2/project-mechanical-room.jpg',
-    alt: 'Commercial mechanical room with chiller and piping — Los Angeles, CA',
-    items: [
-      { title: 'Rooftop Package Units', bullets: ['Crane-coordinated equipment delivery', 'Multi-unit condenser row installs', 'Carrier, York, Trane commercial equipment'] },
-      { title: 'Mechanical Rooms & Controls', bullets: ['Chillers, cooling towers, boilers', 'Building controls & scheduling', 'Preventive maintenance contracts'] },
     ],
   },
   {
@@ -65,7 +65,7 @@ const sections = [
 ];
 
 const faqs = [
-  { q: 'How soon can you come out?', a: 'We offer same-day service Monday–Friday and Saturday. For most calls placed before 2 PM, we can arrive the same day. Sunday service is available for emergencies.' },
+  { q: 'How soon can you come out?', a: 'We offer same-day service Monday–Friday. For most calls placed before 2 PM during business hours, we can arrive the same day.' },
   { q: 'Do you charge for estimates?', a: 'Diagnostic visits have a standard service call fee, which is waived if you proceed with the repair. Written estimates for new installations and replacements are always free.' },
   { q: 'What brands do you work with?', a: 'We service and install all major brands including Carrier, Lennox, Trane, Rheem, York, Goodman, Daikin, Mitsubishi, LG, and many more.' },
   { q: 'Are you licensed and insured?', a: 'Yes. Static Mechanical Inc. is fully licensed by the State of California (LIC #1092530), bonded, and insured. All technicians are background-checked.' },
