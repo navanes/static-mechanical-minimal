@@ -1,41 +1,23 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Img from '../components/Img';
-import ScrollGrowImg from '../components/ScrollGrowImg';
 import TrustBar from '../components/TrustBar';
 import StatsBar from '../components/StatsBar';
-import HowItWorks from '../components/HowItWorks';
-import TestimonialsSection from '../components/TestimonialsSection';
 import CTASection from '../components/CTASection';
 
 const PHONE = '818-318-3032';
-
-// Local paths → drop files in public/images/ and they auto-activate
-// Fallbacks keep the site looking good in the meantime
-const IMG = {
-  hero:    '/images/static-hero.jpg',
-  tech:    '/images/tech.jpg',
-  acCard:  '/images/service-ac.jpg',
-  furnace: '/images/static-furnace.jpg',
-  thermo:  '/images/service-thermo.jpg',
-  mini:    '/images/service-mini.jpg',
-  change:  '/images/static-crane-delivery.jpg',
-  air:     '/images/static-newconstruction.jpg',
-};
+const PHONE_ALT = '818-699-7654';
 
 const services = [
-  { img: IMG.acCard,  title: 'AC Repair & Diagnostics',       desc: 'Fast, accurate diagnosis and repair for all makes and models. We get your AC running the same day.',       href: '/services#ac-repair-diagnostics', alt: 'AC repair technician working on an outdoor condenser unit — Glendale, CA' },
-  { img: IMG.furnace, title: 'Furnace Repair & Installation',  desc: 'From emergency furnace repairs to full new installations — we keep you warm all winter.',                 href: '/services#furnace-repair-installation', alt: 'Gas furnace installation — Burbank, CA' },
-  { img: IMG.thermo,  title: 'Thermostat Installation',        desc: 'Upgrade to a smart thermostat and start saving on energy bills from day one.',                            href: '/services#thermostat-installation', alt: 'Smart thermostat installation — Pasadena, CA' },
-  { img: IMG.mini,    title: 'Mini Split Systems',             desc: 'Ductless comfort exactly where you need it — perfect for additions, garages, and older homes.',            href: '/services#mini-split-systems', alt: 'Ductless mini split installation — San Fernando Valley, CA' },
-  { img: IMG.change,  title: 'Full System Change-Outs',        desc: 'Time for a new system? We handle full HVAC replacements — residential and commercial — with energy-efficient equipment.', href: '/services#full-system-change-outs', pos: 'center 78%', alt: 'Crane delivering new rooftop HVAC package units for a commercial change-out — Los Angeles, CA' },
-  { img: IMG.air,     title: 'Airflow & Efficiency',           desc: 'Poor airflow or high bills? We diagnose ductwork, zoning, and ventilation issues for peak performance.',   href: '/services#airflow-efficiency', alt: 'Supply duct and diffuser installation — East Los Angeles, CA' },
+  { num: '01', title: 'Repair',       desc: 'Fast diagnostics and dependable repairs for every major HVAC system.', href: '/services#repair' },
+  { num: '02', title: 'Installation', desc: 'High-efficiency equipment selected, sized, and installed with precision.', href: '/services#installation' },
+  { num: '03', title: 'Commercial',   desc: 'Rooftop units, controls, airflow, and maintenance for active businesses.', href: '/services#commercial' },
+  { num: '04', title: 'Maintenance',  desc: 'Practical preventive care that protects comfort and equipment life.', href: '/services#maintenance' },
 ];
 
-const areas = [
-  'Los Angeles','Glendale','Burbank','Pasadena','East Los Angeles','San Fernando',
-  'Van Nuys','North Hollywood','Sherman Oaks','Encino','Woodland Hills','Northridge',
-  'Chatsworth','Reseda','Tarzana','Canoga Park','Calabasas','Studio City','Toluca Lake',
+const work = [
+  { img: '/images/v2/project-crane-street.jpg', category: 'COMMERCIAL', title: 'Rooftop package unit replacement', location: 'GLENDALE, CA' },
+  { img: '/images/v2/project-condenser-row.jpg', category: 'RESIDENTIAL', title: 'High-efficiency comfort upgrade', location: 'BURBANK, CA' },
 ];
 
 export default function Home() {
@@ -48,242 +30,112 @@ export default function Home() {
       />
 
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
-      <section
-        className="relative flex items-center min-h-[88vh] bg-brand-navy"
-        aria-label="Hero"
-      >
-        {/* Background photo */}
-        <div className="absolute inset-0 overflow-hidden">
+      <section className="grid md:grid-cols-2" aria-label="Hero">
+        <div className="flex flex-col justify-center px-6 md:px-12 py-16 md:py-0 md:min-h-[80vh] order-2 md:order-1">
+          <p className="text-xs text-gray-500 tracking-widest mb-4">HVAC / LOS ANGELES</p>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05] mb-6">
+            Comfort,<br />handled.
+          </h1>
+          <p className="text-gray-400 text-lg mb-8 max-w-md">
+            Residential + commercial HVAC across Los Angeles, Glendale, Burbank &amp; Pasadena.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-3">
+            <a
+              href={`tel:${PHONE}`}
+              className="inline-flex items-center justify-center gap-2 bg-brand-blue text-white text-sm px-7 py-4 rounded hover:bg-brand-blue-lt transition-colors"
+              aria-label={`Call Static Mechanical at ${PHONE}`}
+            >
+              Call {PHONE} <span aria-hidden="true">&gt;</span>
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 border border-line text-white text-sm px-7 py-4 rounded hover:border-white/30 transition-colors"
+            >
+              Get a Quote <span aria-hidden="true">&gt;</span>
+            </Link>
+          </div>
+          <p className="text-xs text-gray-600 mb-8">or call {PHONE_ALT}</p>
+
+          <TrustBar />
+        </div>
+
+        <div className="order-1 md:order-2 h-[45vh] md:h-auto">
           <Img
-            src={IMG.hero}
-            alt="Static Mechanical Inc. — commercial rooftop HVAC package units, serving Glendale, Burbank, Pasadena and Los Angeles, CA"
+            src="/images/v2/hero-rooftop-glass-dark.jpg"
+            alt="Static Mechanical Inc. — commercial rooftop HVAC package unit, Los Angeles, CA"
             className="w-full h-full object-cover"
-            style={{ objectPosition: 'center 30%' }}
             loading="eager"
             fetchpriority="high"
           />
-          {/* Dark gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 w-full">
-          <div className="max-w-2xl">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-brand-red/90 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" aria-hidden="true" />
-              Same-Day Service Available
-            </div>
-
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase leading-none tracking-tight mb-4">
-              Reliable<br />
-              <span className="text-brand-red">Comfort.</span><br />
-              Done Right.
-            </h1>
-
-            <h2 className="text-blue-200 text-sm md:text-base font-bold uppercase tracking-widest mb-6">
-              HVAC Contractor Serving Glendale, Burbank, Pasadena &amp; the San Fernando Valley
-            </h2>
-
-            <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed max-w-xl">
-              Full-service mechanical contracting for homes and businesses across{' '}
-              <strong className="text-white">Los Angeles, Glendale, Burbank, Pasadena, East Los Angeles,
-              San Fernando, and the greater San Fernando Valley.</strong>{' '}
-              Licensed, bonded, and insured — ready when you need us.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={`tel:${PHONE}`}
-                className="inline-flex items-center justify-center gap-2 bg-brand-red text-white font-display font-black text-xl px-8 py-4 rounded-lg hover:bg-brand-red-lt transition-colors uppercase tracking-wide shadow-lg"
-                aria-label={`Call Static Mechanical at ${PHONE}`}
-              >
-                📞 {PHONE}
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:text-brand-navy transition-colors uppercase tracking-wide backdrop-blur-sm"
-              >
-                Get a Free Quote
-              </Link>
-            </div>
-
-            {/* Inline trust badges */}
-            <div className="flex flex-wrap gap-4 mt-8 text-gray-400 text-sm">
-              {['✓ Licensed & Insured', '✓ LIC #1092530', '✓ No Hidden Fees', '✓ 100% Satisfaction'].map(b => (
-                <span key={b} className="text-green-400 font-medium">{b}</span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* ─── TRUST BAR ────────────────────────────────────────────────────── */}
-      <TrustBar />
-
-      {/* ─── STATS ────────────────────────────────────────────────────────── */}
       <StatsBar />
 
-      {/* ─── SERVICES GRID ────────────────────────────────────────────────── */}
-      <section className="py-20 px-4 bg-white" aria-labelledby="services-heading">
+      {/* ─── SERVICES PREVIEW ─────────────────────────────────────────────── */}
+      <section className="py-24 px-6 border-t border-line" aria-labelledby="services-heading">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-brand-red font-bold uppercase tracking-widest text-sm mb-2">What We Do</p>
-            <h2 id="services-heading" className="font-display text-4xl font-black text-gray-900 uppercase tracking-wide mb-4">
-              Our HVAC Services
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              From emergency repairs to full system replacements — we handle every aspect of residential
-              and commercial heating &amp; cooling in Los Angeles, Glendale, Burbank, Pasadena, and the
-              San Fernando Valley.
-            </p>
-          </div>
+          <p className="text-xs text-gray-500 tracking-widest mb-3">SERVICES</p>
+          <h2 id="services-heading" className="text-4xl text-white mb-14 max-w-lg">
+            What we handle.
+          </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div>
             {services.map((s) => (
               <Link
-                key={s.title}
+                key={s.num}
                 to={s.href}
-                className="group rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col bg-white"
+                className="group flex items-center gap-6 py-6 border-t border-line last:border-b hover:bg-white/[0.02] transition-colors -mx-6 px-6"
               >
-                {/* Photo */}
-                <div className="relative h-48 overflow-hidden">
-                  <Img
-                    src={s.img}
-                    alt={s.alt || s.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    style={s.pos ? { objectPosition: s.pos } : undefined}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/70 to-transparent" />
-                  <h3 className="absolute bottom-3 left-4 right-4 text-white font-display font-black text-lg uppercase leading-tight">
-                    {s.title}
-                  </h3>
-                </div>
-                {/* Text */}
-                <div className="p-5 flex-1 flex flex-col gap-3">
-                  <p className="text-gray-600 text-sm leading-relaxed flex-1">{s.desc}</p>
-                  <span className="text-brand-red font-bold text-sm group-hover:underline">
-                    Learn More →
-                  </span>
-                </div>
+                <span className="text-brand-red text-xs w-6 shrink-0">{s.num}</span>
+                <span className="text-2xl md:text-3xl text-white w-48 md:w-64 shrink-0">{s.title}</span>
+                <span className="hidden md:block text-sm text-gray-500 flex-1">{s.desc}</span>
+                <span className="w-9 h-9 rounded-full border border-line flex items-center justify-center text-gray-400 group-hover:border-white/30 group-hover:text-white transition-colors shrink-0" aria-hidden="true">
+                  &gt;
+                </span>
               </Link>
             ))}
           </div>
 
-          <div className="text-center mt-10">
-            <Link
-              to="/services"
-              className="inline-block bg-brand-navy text-white font-display font-black px-10 py-4 rounded-lg hover:bg-brand-blue transition-colors uppercase tracking-wide"
-            >
-              View All Services
-            </Link>
-          </div>
+          <Link to="/services" className="inline-flex items-center gap-2 text-sm text-white mt-10 hover:text-brand-blue transition-colors">
+            View all services <span aria-hidden="true">&gt;</span>
+          </Link>
         </div>
       </section>
 
-      {/* ─── HOW IT WORKS ─────────────────────────────────────────────────── */}
-      <HowItWorks />
-
-      {/* ─── WHY CHOOSE US ────────────────────────────────────────────────── */}
-      <section className="py-20 px-4 bg-white" aria-labelledby="why-heading">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          {/* Photo */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl">
-            <ScrollGrowImg
-              src={IMG.tech}
-              alt="Static Mechanical HVAC technician ready to help — Los Angeles & San Fernando Valley"
-              className="w-full h-[480px] object-cover"
-            />
-            {/* Floating badge */}
-            <div className="absolute bottom-6 left-6 bg-white rounded-xl shadow-lg px-5 py-4">
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-1">Trusted by</p>
-              <p className="font-display font-black text-xl text-brand-navy leading-tight">Homeowners &amp;<br />Businesses Alike</p>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div>
-            <p className="text-brand-red font-bold uppercase tracking-widest text-sm mb-2">Why Static Mechanical?</p>
-            <h2 id="why-heading" className="font-display text-4xl font-black text-gray-900 uppercase tracking-wide mb-6">
-              Your Local HVAC Experts
-            </h2>
-            <p className="text-gray-500 mb-8 leading-relaxed">
-              When it comes to heating and cooling in Los Angeles, Glendale, Burbank, and Pasadena,
-              Static Mechanical is the name homeowners and businesses trust. Our crews handle everything
-              from a single-family furnace repair in the San Fernando Valley to a full commercial
-              rooftop change-out — with the same attention to detail on every job.
-            </p>
-
-            <ul className="space-y-5">
-              {[
-                { icon: '⚡', title: 'Fast Response Times',       desc: 'Same-day service so your comfort is never on hold.' },
-                { icon: '💰', title: 'Honest, Upfront Pricing',   desc: 'You know the cost before we touch anything. No surprises.' },
-                { icon: '🔧', title: 'Professional Workmanship',  desc: 'Licensed, trained technicians who get it right the first time.' },
-                { icon: '🏠', title: 'Family-Owned & Local',       desc: 'We live in this community and stand behind every job.' },
-              ].map((item) => (
-                <li key={item.title} className="flex gap-4 items-start">
-                  <div className="w-12 h-12 rounded-xl bg-brand-navy/5 border border-brand-navy/10 flex items-center justify-center text-xl shrink-0">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-0.5">{item.title}</h3>
-                    <p className="text-gray-500 text-sm">{item.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              to="/why-choose-us"
-              className="inline-block mt-8 bg-brand-red text-white font-bold px-8 py-3 rounded-lg hover:bg-brand-red-lt transition-colors"
-            >
-              More About Us
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── TESTIMONIALS ─────────────────────────────────────────────────── */}
-      <TestimonialsSection />
-
-      {/* ─── SERVICE AREAS ────────────────────────────────────────────────── */}
-      <section className="bg-white py-14 px-4" aria-labelledby="areas-heading">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-brand-red font-bold uppercase tracking-widest text-sm mb-2">We Come to You</p>
-          <h2 id="areas-heading" className="font-display text-3xl font-black text-gray-900 uppercase tracking-wide mb-4">
-            Serving Glendale, Burbank, Pasadena &amp; the Greater Los Angeles Area
+      {/* ─── SELECTED WORK PREVIEW ────────────────────────────────────────── */}
+      <section className="py-24 px-6 border-t border-line" aria-labelledby="work-heading">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs text-gray-500 tracking-widest mb-3">SELECTED WORK</p>
+          <h2 id="work-heading" className="text-4xl text-white mb-14 max-w-lg">
+            Quiet systems. Visible results.
           </h2>
-          <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
-            Searching for an HVAC contractor near me? From Glendale and Burbank to Pasadena, East Los
-            Angeles, San Fernando, and the rest of the San Fernando Valley — if you're in the{' '}
-            <strong className="text-gray-700">818, 626, or 323 area</strong>, we've got you covered.
-          </p>
-          <div className="flex flex-wrap justify-center gap-2">
-            {areas.map((city) => (
-              <span
-                key={city}
-                className="bg-brand-navy/5 border border-brand-navy/10 text-brand-navy text-sm font-medium px-4 py-2 rounded-full hover:bg-brand-navy hover:text-white transition-colors"
-              >
-                {city}
-              </span>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {work.map((w) => (
+              <Link key={w.title} to="/projects" className="group block">
+                <div className="aspect-[4/3] overflow-hidden rounded bg-surface">
+                  <Img
+                    src={w.img}
+                    alt={`${w.title} — ${w.location}`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-xs text-gray-500 tracking-widest mt-5">{w.category}</p>
+                <p className="text-xl text-white mt-1">{w.title}</p>
+                <p className="text-xs text-gray-500 mt-1">{w.location}</p>
+              </Link>
             ))}
           </div>
+
+          <Link to="/projects" className="inline-flex items-center gap-2 text-sm text-white mt-10 hover:text-brand-blue transition-colors">
+            View all projects <span aria-hidden="true">&gt;</span>
+          </Link>
         </div>
       </section>
 
-      {/* ─── CTA ──────────────────────────────────────────────────────────── */}
-      <CTASection sub="Serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the greater San Fernando Valley — same-day service available." />
-
-      {/* ─── BOTTOM STRIP ─────────────────────────────────────────────────── */}
-      <div className="bg-gray-900 py-4 px-4">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-8 text-sm font-semibold text-gray-400">
-          <span>🏠 RESIDENTIAL &amp; COMMERCIAL</span>
-          <span>🔧 INSTALLATION</span>
-          <span>⚙️ REPAIRS &amp; MAINTENANCE</span>
-          <span>❄️ COOLING</span>
-          <span>🔥 HEATING</span>
-        </div>
-      </div>
+      <CTASection sub="Serving Glendale, Burbank, Pasadena, East Los Angeles, San Fernando & the greater San Fernando Valley." />
     </>
   );
 }

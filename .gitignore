@@ -14,6 +14,7 @@ dist-ssr
 
 # Reference/source photos not used by the built site, and local tool config
 /Images
+/New Images
 .claude
 
 # Editor directories and files

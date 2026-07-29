@@ -10,28 +10,26 @@ export default function NotFound() {
         <title>Page Not Found | Static Mechanical Inc.</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
-      <section className="min-h-[70vh] flex items-center justify-center px-4 bg-gray-50">
+      <section className="min-h-[70vh] flex items-center justify-center px-6">
         <div className="text-center max-w-lg">
-          <p className="font-display text-8xl font-black text-brand-navy/10 leading-none mb-2">404</p>
-          <h1 className="font-display text-3xl font-black text-gray-900 uppercase tracking-wide mb-4">
-            Page Not Found
-          </h1>
+          <p className="text-8xl text-gray-800 leading-none mb-4">404</p>
+          <h1 className="text-3xl text-white mb-4">Page not found</h1>
           <p className="text-gray-500 mb-8 leading-relaxed">
-            The page you're looking for doesn't exist or has been moved.
-            Need HVAC help? We're just a call away.
+            The page you&rsquo;re looking for doesn&rsquo;t exist or has been moved.
+            Need HVAC help? We&rsquo;re just a call away.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/"
-              className="bg-brand-navy text-white font-bold px-7 py-3 rounded-lg hover:bg-brand-blue transition-colors"
+              className="border border-line text-white text-sm px-7 py-3 rounded hover:border-white/30 transition-colors"
             >
-              ← Back to Home
+              &larr; Back to Home
             </Link>
             <a
               href={`tel:${PHONE}`}
-              className="bg-brand-red text-white font-bold px-7 py-3 rounded-lg hover:bg-brand-red-lt transition-colors"
+              className="bg-brand-blue text-white text-sm px-7 py-3 rounded hover:bg-brand-blue-lt transition-colors"
             >
-              📞 {PHONE}
+              Call {PHONE}
             </a>
           </div>
         </div>

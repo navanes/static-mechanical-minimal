@@ -11,17 +11,19 @@ export default {
           red:      '#DF231E',
           'red-lt': '#E74D49',
           'red-dk': '#BB1D19',
-          navy:     '#04326F',
-          blue:     '#053F8D',
-          'blue-lt':'#0759C8',
+          blue:     '#3B6FF6',
+          'blue-lt':'#5A8AFF',
         },
+        // Industrial-noir dark theme
+        ink:      '#0B0E14',
+        surface:  '#12161F',
+        line:     'rgba(255,255,255,0.09)',
+        // Light theme (contact page)
+        paper:    '#EEF1F4',
       },
       fontFamily: {
-        sans:    ['Roboto', 'system-ui', 'Arial', 'sans-serif'],
-        display: ['"Roboto Condensed"', 'Impact', '"Arial Narrow"', 'sans-serif'],
-      },
-      backgroundImage: {
-        'hero-overlay': "linear-gradient(rgba(10,20,45,0.78), rgba(10,20,45,0.55))",
+        sans:    ['Inter', 'system-ui', 'Arial', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'Arial', 'sans-serif'],
       },
     },
   },

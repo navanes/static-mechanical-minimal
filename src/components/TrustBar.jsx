@@ -1,30 +1,9 @@
-const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
-
-export default function TrustBar({ dark = false }) {
-  const bg = dark ? 'bg-gray-900' : 'bg-black';
+export default function TrustBar({ light = false }) {
+  const textColor = light ? 'text-gray-500' : 'text-gray-500';
   return (
-    <div className={`${bg} text-white text-sm font-semibold py-3`}>
-      <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-4 items-center">
-        <span className="flex items-center gap-1">
-          <span>📋</span> LICENSED
-        </span>
-        <span className="text-gray-500">·</span>
-        <span>BONDED</span>
-        <span className="text-gray-500">·</span>
-        <span>INSURED</span>
-        <span className="text-gray-500">·</span>
-        <span>RESIDENTIAL &amp; COMMERCIAL</span>
-        <span className="text-gray-500">·</span>
-        <a
-          href={YELP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block py-2.5 -my-2.5 text-yellow-400 hover:text-yellow-300 transition-colors"
-          aria-label="Static Mechanical on Yelp"
-        >
-          FIND US ON YELP
-        </a>
-      </div>
+    <div className={`flex items-center gap-2 text-xs ${textColor}`}>
+      <span className="w-4 h-px bg-brand-red" aria-hidden="true" />
+      <span className="tracking-wide">Licensed &bull; Insured &bull; Glendale, Burbank, Pasadena + LA</span>
     </div>
   );
 }
