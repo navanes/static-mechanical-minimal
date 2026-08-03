@@ -70,7 +70,7 @@ const faqs = [
   { q: 'What brands do you work with?', a: 'We service and install all major brands including Carrier, Lennox, Trane, Rheem, York, Goodman, Daikin, Mitsubishi, LG, and many more.' },
   { q: 'Are you licensed and insured?', a: 'Yes. Static Mechanical Inc. is fully licensed by the State of California (LIC #1092530), bonded, and insured. All technicians are background-checked.' },
   { q: 'Is there an HVAC contractor near me in Glendale, Burbank, Sunland, or Pasadena?', a: "Yes — Static Mechanical is a local HVAC contractor based in the San Fernando Valley, serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando, and the rest of the greater Los Angeles area." },
-  { q: 'Do you offer Armenian, Persian, or English speaking HVAC service?', a: 'Yes. Static Mechanical can help customers in English, Armenian, and Persian for AC service, heating repair, installation, and maintenance requests.' },
+  { q: 'Do you offer Armenian, Persian/Farsi, or English speaking HVAC service?', a: 'Yes. Static Mechanical can help customers in English, Armenian, and Persian/Farsi for AC service, heating repair, installation, and maintenance requests.' },
   { q: 'Do you offer any warranties?', a: "Yes. We stand behind our work with a labor warranty on all repairs, and new equipment comes with the manufacturer's warranty plus our installation guarantee." },
 ];
 
@@ -85,7 +85,7 @@ export default function Services() {
     <>
       <SEO
         title="HVAC Services — Glendale, Burbank & Sunland"
-        description="HVAC services in Glendale, Burbank, Sunland & Pasadena: AC repair, furnace installation, thermostats, mini splits & full change-outs. English, Armenian & Persian speaking service."
+        description="HVAC services in Glendale, Burbank, Sunland & Pasadena: AC repair, furnace installation, thermostats, mini splits & full change-outs. English, Armenian & Persian/Farsi speaking service."
         canonical="/services"
         breadcrumb={{ name: 'Services', path: '/services' }}
       />
@@ -175,7 +175,7 @@ export default function Services() {
 
       <CTASection
         heading="Need HVAC service today?"
-        sub="Serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando & the greater Los Angeles area. English, Armenian & Persian speaking service."
+        sub="Serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando & the greater Los Angeles area. English, Armenian & Persian/Farsi speaking service."
       />
     </>
   );

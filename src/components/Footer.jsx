@@ -16,7 +16,7 @@ const LINKS = [
 ];
 
 const areas = ['Los Angeles', 'Glendale', 'Burbank', 'Sunland', 'Pasadena', 'East Los Angeles', 'San Fernando'];
-const languages = ['English', 'Armenian', 'Persian'];
+const languages = ['English', 'Armenian', 'Persian/Farsi'];
 
 export default function Footer() {
   return (

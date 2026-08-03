@@ -9,7 +9,7 @@ const SHORT_AREA = 'Glendale, Burbank & LA, CA';
 const OG_IMAGE = `${DOMAIN}/images/v2/hero-homepage.jpg`;
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
 const INSTAGRAM_URL = 'https://www.instagram.com/static_mechanical/';
-const SERVICE_LANGUAGES = ['English', 'Armenian', 'Persian'];
+const SERVICE_LANGUAGES = ['English', 'Armenian', 'Persian', 'Farsi'];
 
 const schemaJSON = JSON.stringify({
   '@context': 'https://schema.org',
@@ -64,7 +64,7 @@ export default function SEO({ title, description, canonical, breadcrumb }) {
       <meta name="description" content={metaDesc} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="keywords" content="HVAC contractor Los Angeles, HVAC Glendale, AC Glendale, HVAC near me, AC repair near me, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC Sunland, AC service Sunland, HVAC East Los Angeles, HVAC San Fernando, San Fernando Valley HVAC contractor, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
+      <meta name="keywords" content="HVAC contractor Los Angeles, HVAC Glendale, AC Glendale, HVAC near me, AC repair near me, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC Sunland, AC service Sunland, HVAC East Los Angeles, HVAC San Fernando, San Fernando Valley HVAC contractor, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, Farsi speaking HVAC, Farsi speaking AC service, Iranian HVAC contractor, Iranian AC service, Iranian speaking HVAC, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
       <meta name="geo.region" content="US-CA" />
       <meta name="geo.placename" content="Los Angeles, Glendale, Burbank, Sunland, Pasadena, CA" />
       <meta name="author" content={SITE_NAME} />

@@ -45,7 +45,7 @@ export default function Home() {
     <div style={HOME_BACKGROUND}>
       <SEO
         title="Commercial & Residential HVAC — Glendale & Burbank, CA"
-        description="Static Mechanical Inc. — commercial & residential HVAC contractor serving Glendale, Burbank, Sunland, Pasadena & the LA area. English, Armenian & Persian speaking AC service. Call 818-318-3032."
+        description="Static Mechanical Inc. — commercial & residential HVAC contractor serving Glendale, Burbank, Sunland, Pasadena & the LA area. English, Armenian & Persian/Farsi speaking AC service. Call 818-318-3032."
         canonical="/"
       />
 
@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CTASection sub="Serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando & the greater San Fernando Valley. English, Armenian & Persian speaking service." />
+      <CTASection sub="Serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando & the greater San Fernando Valley. English, Armenian & Persian/Farsi speaking service." />
     </div>
   );
 }

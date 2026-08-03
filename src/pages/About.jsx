@@ -19,7 +19,7 @@ const reasons = [
   { title: 'Honest, Upfront Pricing', desc: 'You know the cost before we touch anything. No surprises, no upselling.' },
   { title: 'Professional Workmanship', desc: 'Trained, certified, background-checked technicians on every job.' },
   { title: 'Local & Community-Focused', desc: 'Based in the San Fernando Valley, serving Glendale, Burbank, Sunland, and Pasadena.' },
-  { title: 'Multilingual Service', desc: 'English, Armenian, and Persian speaking support for HVAC repairs, installations, and maintenance.' },
+  { title: 'Multilingual Service', desc: 'English, Armenian, and Persian/Farsi speaking support for HVAC repairs, installations, and maintenance.' },
   { title: '100% Satisfaction Guaranteed', desc: "If you're not satisfied, we come back and make it right." },
   { title: 'Fully Licensed & Insured', desc: 'California licensed contractor (LIC #1092530), bonded, and insured.' },
 ];
@@ -29,7 +29,7 @@ export default function About() {
     <>
       <SEO
         title="About — Static Mechanical Inc."
-        description="Static Mechanical: same-day HVAC service, upfront pricing, licensed & bonded contractor serving Glendale, Burbank, Sunland & Pasadena. English, Armenian & Persian speaking service."
+        description="Static Mechanical: same-day HVAC service, upfront pricing, licensed & bonded contractor serving Glendale, Burbank, Sunland & Pasadena. English, Armenian & Persian/Farsi speaking service."
         canonical="/about"
         breadcrumb={{ name: 'About', path: '/about' }}
       />
