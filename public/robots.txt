@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://staticmechanicalinc.com/sitemap.xml
+Sitemap: https://static-mechanical.com/sitemap.xml

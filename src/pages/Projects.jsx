@@ -18,7 +18,7 @@ export default function Projects() {
     <>
       <SEO
         title="Projects — Static Mechanical Inc."
-        description="Selected HVAC projects: rooftop package units, mechanical rooms, cooling towers, and condenser installations across Los Angeles, Glendale, Burbank & Pasadena."
+        description="Selected HVAC projects: rooftop package units, mechanical rooms, cooling towers, and condenser installations across Los Angeles, Glendale, Burbank, Sunland & Pasadena."
         canonical="/projects"
         breadcrumb={{ name: 'Projects', path: '/projects' }}
       />

@@ -2,13 +2,14 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'Static Mechanical Inc.';
 const PHONE = '818-318-3032';
-// Placeholder domain — update once staticmechanicalinc.com (or the real domain) is registered/confirmed.
-const DOMAIN = 'https://staticmechanicalinc.com';
+const DOMAIN = 'https://static-mechanical.com';
 // Short form for title/description defaults — Google truncates titles past ~60 chars
 // and descriptions past ~155, so these must stay compact.
 const SHORT_AREA = 'Glendale, Burbank & LA, CA';
 const OG_IMAGE = `${DOMAIN}/images/v2/hero-homepage.jpg`;
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
+const INSTAGRAM_URL = 'https://www.instagram.com/static_mechanical/';
+const SERVICE_LANGUAGES = ['English', 'Armenian', 'Persian'];
 
 const schemaJSON = JSON.stringify({
   '@context': 'https://schema.org',
@@ -17,7 +18,8 @@ const schemaJSON = JSON.stringify({
   telephone: '+18183183032',
   email: 'Staticmechanicalinc@gmail.com',
   url: DOMAIN,
-  sameAs: [YELP_URL],
+  sameAs: [YELP_URL, INSTAGRAM_URL],
+  knowsLanguage: SERVICE_LANGUAGES,
   priceRange: '$$',
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '19:00' },
@@ -29,7 +31,7 @@ const schemaJSON = JSON.stringify({
     addressCountry: 'US',
   },
   areaServed: [
-    'Los Angeles','Glendale','Burbank','Pasadena','East Los Angeles','San Fernando','Van Nuys',
+    'Los Angeles','Glendale','Burbank','Pasadena','Sunland','East Los Angeles','San Fernando','Van Nuys',
     'North Hollywood','Sherman Oaks','Encino','Calabasas',
     'Woodland Hills','Northridge','Reseda','Tarzana',
   ],
@@ -62,10 +64,11 @@ export default function SEO({ title, description, canonical, breadcrumb }) {
       <meta name="description" content={metaDesc} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="keywords" content="HVAC contractor Los Angeles, HVAC Glendale, AC Glendale, HVAC near me, AC repair near me, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC East Los Angeles, HVAC San Fernando, San Fernando Valley HVAC contractor, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
+      <meta name="keywords" content="HVAC contractor Los Angeles, HVAC Glendale, AC Glendale, HVAC near me, AC repair near me, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC Sunland, AC service Sunland, HVAC East Los Angeles, HVAC San Fernando, San Fernando Valley HVAC contractor, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
       <meta name="geo.region" content="US-CA" />
-      <meta name="geo.placename" content="Los Angeles, CA" />
+      <meta name="geo.placename" content="Los Angeles, Glendale, Burbank, Sunland, Pasadena, CA" />
       <meta name="author" content={SITE_NAME} />
+      <meta name="language" content={SERVICE_LANGUAGES.join(', ')} />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />

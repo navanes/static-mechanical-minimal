@@ -3,7 +3,7 @@ export default function TrustBar({ light = false }) {
   return (
     <div className={`flex items-center gap-3 text-[13px] leading-relaxed ${textColor}`}>
       <span className="w-4 h-px bg-brand-red" aria-hidden="true" />
-      <span className="tracking-wide">Licensed &bull; Insured &bull; Glendale, Burbank, Pasadena + LA</span>
+      <span className="tracking-wide">Licensed &bull; Insured &bull; Glendale, Burbank, Sunland, Pasadena + LA</span>
     </div>
   );
 }

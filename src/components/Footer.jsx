@@ -5,6 +5,7 @@ const PHONE = '818-318-3032';
 const PHONE_ALT = '818-699-7654';
 const EMAIL = 'Staticmechanicalinc@gmail.com';
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
+const INSTAGRAM_URL = 'https://www.instagram.com/static_mechanical/';
 const LICENSE_NO = '1092530';
 
 const LINKS = [
@@ -14,7 +15,8 @@ const LINKS = [
   { to: '/contact', label: 'Contact' },
 ];
 
-const areas = ['Los Angeles', 'Glendale', 'Burbank', 'Pasadena', 'East Los Angeles', 'San Fernando'];
+const areas = ['Los Angeles', 'Glendale', 'Burbank', 'Sunland', 'Pasadena', 'East Los Angeles', 'San Fernando'];
+const languages = ['English', 'Armenian', 'Persian'];
 
 export default function Footer() {
   return (
@@ -28,6 +30,9 @@ export default function Footer() {
           <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-gray-300">
             Commercial + residential HVAC contractor serving {areas.join(', ')}, and the greater
             San Fernando Valley. Licensed, bonded, and insured.
+          </p>
+          <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-gray-500">
+            Service available in {languages.join(', ')}.
           </p>
         </div>
 
@@ -67,6 +72,11 @@ export default function Footer() {
             <li>
               <a href={YELP_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] text-gray-300 transition-colors hover:text-white">
                 Yelp Reviews
+              </a>
+            </li>
+            <li>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] text-gray-300 transition-colors hover:text-white">
+                Instagram
               </a>
             </li>
           </ul>
