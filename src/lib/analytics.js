@@ -1,16 +1,16 @@
 // ─── Google Analytics 4 ───────────────────────────────────────────────────────
 // 1. Go to https://analytics.google.com → Admin → Create Property → Web
 // 2. Copy the Measurement ID (looks like "G-XXXXXXXXXX")
-// 3. Paste it in below
+// 3. Add it in Netlify as VITE_GA_MEASUREMENT_ID
 // Until a real ID is set, this is entirely inert — no script loads, no
 // tracking runs, nothing is sent anywhere.
-const MEASUREMENT_ID = 'G-XXXXXXXXXX';
+const MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || '';
 // ───────────────────────────────────────────────────────────────────────────
 
 let initialized = false;
 
 function isEnabled() {
-  return MEASUREMENT_ID && MEASUREMENT_ID !== 'G-XXXXXXXXXX';
+  return MEASUREMENT_ID.startsWith('G-');
 }
 
 export function initAnalytics() {
@@ -31,7 +31,7 @@ export function initAnalytics() {
   // GA's default full-page-load detection, which only fires once.
   gtag('config', MEASUREMENT_ID, { send_page_view: false });
 
-  // Delegated click tracking: catches every tel:/mailto:/Yelp link on the site
+  // Delegated click tracking: catches every tel:/mailto:/Yelp/Instagram link on the site
   // (navbar, footer, hero, every service's call button, etc.) from one place,
   // instead of wiring an onClick into each individual button.
   document.addEventListener('click', (e) => {
@@ -44,6 +44,8 @@ export function initAnalytics() {
       trackEvent('click_to_email');
     } else if (href.includes('yelp.com')) {
       trackEvent('click_yelp_link');
+    } else if (href.includes('instagram.com')) {
+      trackEvent('click_instagram_link');
     }
   });
 }
