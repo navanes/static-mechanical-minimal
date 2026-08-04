@@ -205,7 +205,7 @@ const htmlReport = (date, report) => `
 async function sendReport(date, report) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.REPORT_FROM_EMAIL || 'Static Mechanical <onboarding@resend.dev>';
-  const to = process.env.REPORT_TO_EMAIL || 'narek.avanesian@gmail.com';
+  const to = process.env.REPORT_TO_EMAIL || 'mr.narek.avanesian@gmail.com';
 
   if (!apiKey) throw new Error('RESEND_API_KEY is not configured.');
 

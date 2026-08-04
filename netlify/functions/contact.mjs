@@ -36,8 +36,8 @@ const formatHtml = (data) => `
 async function sendEmail(data) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.REPORT_FROM_EMAIL || 'Static Mechanical <onboarding@resend.dev>';
-  const to = process.env.CONTACT_TO_EMAIL || process.env.REPORT_TO_EMAIL || 'narek.avanesian@gmail.com';
-  const cc = process.env.CONTACT_CC_EMAIL || 'Staticmechanicalinc@gmail.com';
+  const to = process.env.CONTACT_TO_EMAIL || process.env.REPORT_TO_EMAIL || 'mr.narek.avanesian@gmail.com';
+  const cc = process.env.CONTACT_CC_EMAIL || '';
 
   if (!apiKey) {
     throw new Error('RESEND_API_KEY is not configured.');
