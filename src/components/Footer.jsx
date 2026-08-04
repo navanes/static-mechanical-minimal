@@ -15,7 +15,6 @@ const LINKS = [
   { to: '/contact', label: 'Contact' },
 ];
 
-const areas = ['Los Angeles', 'Glendale', 'Burbank', 'Sunland', 'Pasadena', 'East Los Angeles', 'San Fernando'];
 const languages = ['English', 'Armenian', 'Persian/Farsi'];
 
 export default function Footer() {
@@ -28,8 +27,8 @@ export default function Footer() {
             <Logo size={36} />
           </Link>
           <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-gray-300">
-            Commercial + residential HVAC contractor serving {areas.join(', ')}, and the greater
-            San Fernando Valley. Licensed, bonded, and insured.
+            Commercial + residential HVAC contractor serving the greater Los Angeles area,
+            Los Angeles County, and surrounding communities. Licensed, bonded, and insured.
           </p>
           <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-gray-500">
             Service available in {languages.join(', ')}.
@@ -85,7 +84,7 @@ export default function Footer() {
 
       <div className="border-t border-line">
         <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-2 px-6 py-5 text-[13px] text-gray-500 sm:flex-row">
-          <p>LIC #{LICENSE_NO} · Glendale, California</p>
+          <p>LIC #{LICENSE_NO} · California</p>
           <p>© 2026 Static Mechanical Inc.</p>
         </div>
       </div>

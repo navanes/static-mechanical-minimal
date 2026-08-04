@@ -5,7 +5,7 @@ const PHONE = '818-318-3032';
 const DOMAIN = 'https://static-mechanical.com';
 // Short form for title/description defaults — Google truncates titles past ~60 chars
 // and descriptions past ~155, so these must stay compact.
-const SHORT_AREA = 'Glendale, Burbank & LA, CA';
+const SHORT_AREA = 'Greater Los Angeles, CA';
 const OG_IMAGE = `${DOMAIN}/images/v2/hero-homepage.jpg`;
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
 const INSTAGRAM_URL = 'https://www.instagram.com/static_mechanical/';
@@ -31,9 +31,11 @@ const schemaJSON = JSON.stringify({
     addressCountry: 'US',
   },
   areaServed: [
-    'Los Angeles','Glendale','Burbank','Pasadena','Sunland','East Los Angeles','San Fernando','Van Nuys',
-    'North Hollywood','Sherman Oaks','Encino','Calabasas',
-    'Woodland Hills','Northridge','Reseda','Tarzana',
+    'Greater Los Angeles Area',
+    'Los Angeles County',
+    'San Fernando Valley',
+    'Southern California',
+    'Surrounding Los Angeles communities',
   ],
 });
 
@@ -64,9 +66,9 @@ export default function SEO({ title, description, canonical, breadcrumb }) {
       <meta name="description" content={metaDesc} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="keywords" content="HVAC contractor Los Angeles, HVAC Glendale, AC Glendale, HVAC near me, AC repair near me, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC Sunland, AC service Sunland, HVAC East Los Angeles, HVAC San Fernando, San Fernando Valley HVAC contractor, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, Farsi speaking HVAC, Farsi speaking AC service, Iranian HVAC contractor, Iranian AC service, Iranian speaking HVAC, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
+      <meta name="keywords" content="HVAC contractor Los Angeles, Los Angeles HVAC contractor, Greater Los Angeles HVAC, Los Angeles County HVAC, AC service Los Angeles, AC repair near me, HVAC near me, San Fernando Valley HVAC contractor, Southern California HVAC, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, Farsi speaking HVAC, Farsi speaking AC service, Iranian HVAC contractor, Iranian AC service, Iranian speaking HVAC, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
       <meta name="geo.region" content="US-CA" />
-      <meta name="geo.placename" content="Los Angeles, Glendale, Burbank, Sunland, Pasadena, CA" />
+      <meta name="geo.placename" content="Greater Los Angeles, CA" />
       <meta name="author" content={SITE_NAME} />
       <meta name="language" content={SERVICE_LANGUAGES.join(', ')} />
 

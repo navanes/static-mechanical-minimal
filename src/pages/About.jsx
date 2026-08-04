@@ -18,7 +18,7 @@ const reasons = [
   { title: 'Fast Response Times', desc: "Same-day service and prioritized urgent calls. Most customers see a technician within hours." },
   { title: 'Honest, Upfront Pricing', desc: 'You know the cost before we touch anything. No surprises, no upselling.' },
   { title: 'Professional Workmanship', desc: 'Trained, certified, background-checked technicians on every job.' },
-  { title: 'Local & Community-Focused', desc: 'Based in the San Fernando Valley, serving Glendale, Burbank, Sunland, and Pasadena.' },
+  { title: 'Local & Community-Focused', desc: 'Based in the Los Angeles area, serving homes and businesses across Greater LA and nearby communities.' },
   { title: 'Multilingual Service', desc: 'English, Armenian, and Persian/Farsi speaking support for HVAC repairs, installations, and maintenance.' },
   { title: '100% Satisfaction Guaranteed', desc: "If you're not satisfied, we come back and make it right." },
   { title: 'Fully Licensed & Insured', desc: 'California licensed contractor (LIC #1092530), bonded, and insured.' },
@@ -29,7 +29,7 @@ export default function About() {
     <>
       <SEO
         title="About — Static Mechanical Inc."
-        description="Static Mechanical: same-day HVAC service, upfront pricing, licensed & bonded contractor serving Glendale, Burbank, Sunland & Pasadena. English, Armenian & Persian/Farsi speaking service."
+        description="Static Mechanical: same-day HVAC service, upfront pricing, licensed & bonded contractor serving the greater Los Angeles area. English, Armenian & Persian/Farsi speaking service."
         canonical="/about"
         breadcrumb={{ name: 'About', path: '/about' }}
       />
@@ -58,8 +58,8 @@ export default function About() {
             <h2 className="mb-6 text-[30px] font-medium leading-tight text-white md:text-4xl">Built on trust, backed by experience.</h2>
             <p className="mb-4 text-[16px] leading-[1.65] text-gray-300 md:text-[17px]">
               Static Mechanical Inc. was founded with one mission: provide the kind of honest,
-              high-quality HVAC contracting that homeowners and businesses in Glendale, Burbank,
-              Sunland, Pasadena, and greater Los Angeles couldn't easily find. No bait-and-switch pricing,
+              high-quality HVAC contracting that homeowners and businesses across the greater
+              Los Angeles area couldn't easily find. No bait-and-switch pricing,
               no scare tactics — just skilled crews who fix the problem and treat every property
               with respect.
             </p>
@@ -121,7 +121,7 @@ export default function About() {
 
       <CTASection
         heading="Experience the Static Mechanical difference."
-        sub="Serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando & the Los Angeles area."
+        sub="Serving the greater Los Angeles area, Los Angeles County, and surrounding communities."
       />
     </>
   );

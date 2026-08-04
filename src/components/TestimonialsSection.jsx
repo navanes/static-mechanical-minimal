@@ -2,12 +2,12 @@
 const reviews = [
   {
     name: 'John M.',
-    location: 'Glendale, CA',
+    location: 'Los Angeles Area, CA',
     text: 'Static Mechanical handled our office building\'s rooftop package unit replacement start to finish. Clean install, clear communication, zero downtime for our tenants.',
   },
   {
     name: 'Maria T.',
-    location: 'Burbank, CA',
+    location: 'Los Angeles Area, CA',
     text: 'Our furnace stopped working on the coldest night of the year. They had a technician at our door by 10 AM and explained everything clearly.',
   },
   {

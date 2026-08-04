@@ -77,8 +77,8 @@ export default function Contact() {
   return (
     <div className="bg-[linear-gradient(180deg,rgba(5,8,13,0.28),rgba(5,8,13,0.70))] text-white">
       <SEO
-        title="Contact Us — Glendale, Burbank & Sunland HVAC"
-        description="Contact Static Mechanical for same-day HVAC service in Glendale, Burbank, Sunland & Pasadena. English, Armenian & Persian/Farsi speaking AC service."
+        title="Contact Us — Greater Los Angeles HVAC"
+        description="Contact Static Mechanical for same-day HVAC service across the greater Los Angeles area and surrounding communities. English, Armenian & Persian/Farsi speaking AC service."
         canonical="/contact"
         breadcrumb={{ name: 'Contact', path: '/contact' }}
       />
@@ -131,8 +131,7 @@ export default function Contact() {
             <div className="rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 text-white backdrop-blur">
               <p className="mb-2 text-[24px] font-semibold">Service Area</p>
               <p className="text-[15px] leading-relaxed text-gray-300">
-                Los Angeles, Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando &amp; the
-                San Fernando Valley, CA
+                Greater Los Angeles area, Los Angeles County, the San Fernando Valley, and surrounding communities.
               </p>
             </div>
 

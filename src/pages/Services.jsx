@@ -31,7 +31,7 @@ const sections = [
     heading: 'Fast, honest repairs.',
     intro: "A broken system in the Los Angeles heat — or a cold night with no heat — is no small problem. Our technicians respond fast and come equipped to diagnose the issue correctly the first time, with an upfront price before any work begins.",
     img: '/images/service-ac.jpg',
-    alt: 'AC repair technician diagnosing an outdoor condenser unit — Glendale, CA',
+    alt: 'AC repair technician diagnosing an outdoor condenser unit in the Los Angeles area',
     items: [
       { title: 'AC Repair & Diagnostics', bullets: ['All makes and models — Carrier, Lennox, Trane, Rheem, York', 'Refrigerant leak detection & recharge', 'Compressor, capacitor & contactor repairs', 'Evaporator & condenser coil cleaning'] },
       { title: 'Furnace Repair', bullets: ['Gas & electric furnace repair', 'Igniter, heat exchanger & blower repairs', 'Carbon monoxide & safety checks', 'Ready 7 days a week'] },
@@ -56,7 +56,7 @@ const sections = [
     heading: 'Protects comfort and equipment life.',
     intro: 'Poor airflow, high bills, or a system that runs constantly without reaching temperature usually means an airflow or maintenance problem — not a system that needs replacing. Regular preventive care catches small issues before they become expensive ones.',
     img: '/images/gallery-31.jpg',
-    alt: 'Supply duct and diffuser installation for improved airflow — East Los Angeles, CA',
+    alt: 'Supply duct and diffuser installation for improved airflow in the Los Angeles area',
     items: [
       { title: 'Airflow & Efficiency', bullets: ['Duct inspection, sealing & repair', 'Airflow & static pressure testing', 'Zoning system installation'] },
       { title: 'Preventive Maintenance', bullets: ['Seasonal tune-ups', 'Filter & ventilation recommendations', 'Extends equipment lifespan'] },
@@ -69,7 +69,7 @@ const faqs = [
   { q: 'Do you charge for estimates?', a: 'Diagnostic visits have a standard service call fee, which is waived if you proceed with the repair. Written estimates for new installations and replacements are always free.' },
   { q: 'What brands do you work with?', a: 'We service and install all major brands including Carrier, Lennox, Trane, Rheem, York, Goodman, Daikin, Mitsubishi, LG, and many more.' },
   { q: 'Are you licensed and insured?', a: 'Yes. Static Mechanical Inc. is fully licensed by the State of California (LIC #1092530), bonded, and insured. All technicians are background-checked.' },
-  { q: 'Is there an HVAC contractor near me in Glendale, Burbank, Sunland, or Pasadena?', a: "Yes — Static Mechanical is a local HVAC contractor based in the San Fernando Valley, serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando, and the rest of the greater Los Angeles area." },
+  { q: 'Is there an HVAC contractor near me in the Los Angeles area?', a: 'Yes — Static Mechanical serves the greater Los Angeles area, Los Angeles County, the San Fernando Valley, and surrounding communities.' },
   { q: 'Do you offer Armenian, Persian/Farsi, or English speaking HVAC service?', a: 'Yes. Static Mechanical can help customers in English, Armenian, and Persian/Farsi for AC service, heating repair, installation, and maintenance requests.' },
   { q: 'Do you offer any warranties?', a: "Yes. We stand behind our work with a labor warranty on all repairs, and new equipment comes with the manufacturer's warranty plus our installation guarantee." },
 ];
@@ -84,8 +84,8 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="HVAC Services — Glendale, Burbank & Sunland"
-        description="HVAC services in Glendale, Burbank, Sunland & Pasadena: AC repair, furnace installation, thermostats, mini splits & full change-outs. English, Armenian & Persian/Farsi speaking service."
+        title="HVAC Services — Greater Los Angeles"
+        description="HVAC services across the greater Los Angeles area: AC repair, furnace installation, thermostats, mini splits & full change-outs. English, Armenian & Persian/Farsi speaking service."
         canonical="/services"
         breadcrumb={{ name: 'Services', path: '/services' }}
       />
@@ -175,7 +175,7 @@ export default function Services() {
 
       <CTASection
         heading="Need HVAC service today?"
-        sub="Serving Glendale, Burbank, Sunland, Pasadena, East Los Angeles, San Fernando & the greater Los Angeles area. English, Armenian & Persian/Farsi speaking service."
+        sub="Serving the greater Los Angeles area, Los Angeles County, and surrounding communities. English, Armenian & Persian/Farsi speaking service."
       />
     </>
   );
