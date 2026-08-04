@@ -33,7 +33,23 @@ const schemaJSON = JSON.stringify({
   areaServed: [
     'Greater Los Angeles Area',
     'Los Angeles County',
+    'Los Angeles',
+    'Glendale',
+    'Burbank',
+    'Pasadena',
+    'Sunland',
+    'East Los Angeles',
     'San Fernando Valley',
+    'San Fernando',
+    'Van Nuys',
+    'North Hollywood',
+    'Sherman Oaks',
+    'Encino',
+    'Calabasas',
+    'Woodland Hills',
+    'Northridge',
+    'Reseda',
+    'Tarzana',
     'Southern California',
     'Surrounding Los Angeles communities',
   ],
@@ -66,7 +82,7 @@ export default function SEO({ title, description, canonical, breadcrumb }) {
       <meta name="description" content={metaDesc} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="keywords" content="HVAC contractor Los Angeles, Los Angeles HVAC contractor, Greater Los Angeles HVAC, Los Angeles County HVAC, AC service Los Angeles, AC repair near me, HVAC near me, San Fernando Valley HVAC contractor, Southern California HVAC, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, Farsi speaking HVAC, Farsi speaking AC service, Iranian HVAC contractor, Iranian AC service, Iranian speaking HVAC, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
+      <meta name="keywords" content="HVAC contractor Los Angeles, Los Angeles HVAC contractor, Greater Los Angeles HVAC, Los Angeles County HVAC, AC service Los Angeles, AC repair near me, HVAC near me, HVAC Glendale, AC Glendale, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC Sunland, AC service Sunland, HVAC East Los Angeles, HVAC San Fernando, HVAC Van Nuys, HVAC North Hollywood, HVAC Sherman Oaks, HVAC Encino, HVAC Calabasas, HVAC Woodland Hills, HVAC Northridge, HVAC Reseda, HVAC Tarzana, San Fernando Valley HVAC contractor, Southern California HVAC, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, Farsi speaking HVAC, Farsi speaking AC service, Iranian HVAC contractor, Iranian AC service, Iranian speaking HVAC, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
       <meta name="geo.region" content="US-CA" />
       <meta name="geo.placename" content="Greater Los Angeles, CA" />
       <meta name="author" content={SITE_NAME} />
