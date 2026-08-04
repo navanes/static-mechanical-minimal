@@ -7,13 +7,6 @@ const PHONE_ALT = '818-699-7654';
 const EMAIL = 'Staticmechanicalinc@gmail.com';
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
 
-// ─── Formspree ────────────────────────────────────────────────────────────────
-// 1. Go to https://formspree.io → New Form → copy your form ID
-// 2. Replace 'YOUR_FORM_ID' below with it  (e.g. 'xpwzgkqr')
-const FORMSPREE_ID = 'YOUR_FORM_ID';
-const FORMSPREE_URL = `https://formspree.io/f/${FORMSPREE_ID}`;
-// ─────────────────────────────────────────────────────────────────────────────
-
 const SERVICE_OPTIONS = [
   'AC Repair & Diagnostics',
   'Furnace Repair & Installation',
@@ -54,15 +47,9 @@ export default function Contact() {
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
 
-    // If Formspree ID is not yet set, just show success (dev mode)
-    if (FORMSPREE_ID === 'YOUR_FORM_ID') {
-      setSubmitted(true);
-      return;
-    }
-
     setSending(true);
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
