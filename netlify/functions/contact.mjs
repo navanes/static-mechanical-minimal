@@ -33,11 +33,18 @@ const formatHtml = (data) => `
   </div>
 `;
 
+const uniqueRecipients = (emails) => [...new Set(emails.filter(Boolean))];
+
 async function sendEmail(data) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.REPORT_FROM_EMAIL || 'Static Mechanical <onboarding@resend.dev>';
   const to = process.env.CONTACT_TO_EMAIL || process.env.REPORT_TO_EMAIL || 'mr.narek.avanesian@gmail.com';
-  const extraRecipients = (process.env.CONTACT_COPY_EMAIL || '')
+  const extraRecipients = [
+    process.env.CONTACT_COPY_EMAIL,
+    process.env.CONTACT_CC_EMAIL,
+  ]
+    .filter(Boolean)
+    .join(',')
     .split(',')
     .map((email) => email.trim())
     .filter(Boolean);
@@ -46,7 +53,7 @@ async function sendEmail(data) {
     throw new Error('RESEND_API_KEY is not configured.');
   }
 
-  for (const recipient of [to, ...extraRecipients]) {
+  for (const recipient of uniqueRecipients([to, ...extraRecipients])) {
     const res = await fetch(RESEND_API_URL, {
       method: 'POST',
       headers: {
