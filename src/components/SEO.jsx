@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'Static Mechanical Inc.';
-const PHONE = '818-318-3032';
+const PHONE = '818-699-7654';
 const DOMAIN = 'https://static-mechanical.com';
 // Short form for title/description defaults — Google truncates titles past ~60 chars
 // and descriptions past ~155, so these must stay compact.
@@ -15,7 +15,7 @@ const schemaJSON = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'HVACBusiness',
   name: SITE_NAME,
-  telephone: '+18183183032',
+  telephone: '+18186997654',
   email: 'Staticmechanicalinc@gmail.com',
   url: DOMAIN,
   sameAs: [YELP_URL, INSTAGRAM_URL],
@@ -45,6 +45,8 @@ const schemaJSON = JSON.stringify({
     'North Hollywood',
     'Sherman Oaks',
     'Encino',
+    'Beverly Hills',
+    'Santa Monica',
     'Calabasas',
     'Woodland Hills',
     'Northridge',
@@ -82,7 +84,7 @@ export default function SEO({ title, description, canonical, breadcrumb }) {
       <meta name="description" content={metaDesc} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="keywords" content="HVAC contractor Los Angeles, Los Angeles HVAC contractor, Greater Los Angeles HVAC, Los Angeles County HVAC, AC service Los Angeles, AC repair near me, HVAC near me, HVAC Glendale, AC Glendale, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC Sunland, AC service Sunland, HVAC East Los Angeles, HVAC San Fernando, HVAC Van Nuys, HVAC North Hollywood, HVAC Sherman Oaks, HVAC Encino, HVAC Calabasas, HVAC Woodland Hills, HVAC Northridge, HVAC Reseda, HVAC Tarzana, San Fernando Valley HVAC contractor, Southern California HVAC, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, Farsi speaking HVAC, Farsi speaking AC service, Iranian HVAC contractor, Iranian AC service, Iranian speaking HVAC, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
+      <meta name="keywords" content="HVAC contractor Los Angeles, Los Angeles HVAC contractor, Greater Los Angeles HVAC, Los Angeles County HVAC, AC service Los Angeles, AC repair near me, HVAC near me, HVAC Glendale, AC Glendale, Glendale CA HVAC, HVAC Burbank, AC Burbank, HVAC Pasadena, AC Pasadena, HVAC Sunland, AC service Sunland, HVAC East Los Angeles, HVAC San Fernando, HVAC Van Nuys, HVAC North Hollywood, HVAC Sherman Oaks, HVAC Encino, HVAC Beverly Hills, commercial HVAC Beverly Hills, HVAC Santa Monica, commercial HVAC Santa Monica, HVAC Calabasas, HVAC Woodland Hills, HVAC Northridge, HVAC Reseda, HVAC Tarzana, San Fernando Valley HVAC contractor, Southern California HVAC, Armenian speaking HVAC, Armenian speaking AC service, Persian speaking HVAC, Persian speaking AC service, Farsi speaking HVAC, Farsi speaking AC service, Iranian HVAC contractor, Iranian AC service, Iranian speaking HVAC, English speaking HVAC, English speaking AC service, mechanical contractor Los Angeles, commercial HVAC, commercial HVAC contractor, rooftop HVAC units, air conditioning repair, furnace repair, AC installation, heating repair, mini split, same day HVAC" />
       <meta name="geo.region" content="US-CA" />
       <meta name="geo.placename" content="Greater Los Angeles, CA" />
       <meta name="author" content={SITE_NAME} />

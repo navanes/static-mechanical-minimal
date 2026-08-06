@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
+import { InstagramIcon, YelpIcon } from './SocialIcon';
 
-const PHONE = '818-318-3032';
-const PHONE_ALT = '818-699-7654';
+const PHONE = '818-699-7654';
+const PHONE_ALT = '818-318-3032';
 const EMAIL = 'Staticmechanicalinc@gmail.com';
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
 const INSTAGRAM_URL = 'https://www.instagram.com/static_mechanical/';
@@ -54,11 +55,13 @@ export default function Footer() {
           <p className="mb-5 text-xs font-semibold tracking-[0.14em] text-gray-500">CONTACT</p>
           <ul className="space-y-3">
             <li>
+              <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-500">Main line</p>
               <a href={`tel:${PHONE}`} className="text-[15px] font-medium text-white transition-colors hover:text-brand-blue">
                 {PHONE}
               </a>
             </li>
             <li>
+              <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-500">Service line</p>
               <a href={`tel:${PHONE_ALT}`} className="text-[15px] font-medium text-white transition-colors hover:text-brand-blue">
                 {PHONE_ALT}
               </a>
@@ -68,14 +71,24 @@ export default function Footer() {
                 {EMAIL}
               </a>
             </li>
-            <li>
-              <a href={YELP_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] text-gray-300 transition-colors hover:text-white">
-                Yelp Reviews
+            <li className="flex gap-3 pt-2">
+              <a
+                href={YELP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-10 w-10 items-center justify-center rounded border border-white/15 text-gray-200 transition-colors hover:border-brand-blue hover:bg-brand-blue hover:text-white"
+                aria-label="Open Static Mechanical Yelp reviews"
+              >
+                <YelpIcon className="h-5 w-5" />
               </a>
-            </li>
-            <li>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] text-gray-300 transition-colors hover:text-white">
-                Instagram
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-10 w-10 items-center justify-center rounded border border-white/15 text-gray-200 transition-colors hover:border-brand-blue hover:bg-brand-blue hover:text-white"
+                aria-label="Open Static Mechanical Instagram"
+              >
+                <InstagramIcon className="h-5 w-5" />
               </a>
             </li>
           </ul>

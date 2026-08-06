@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const PHONE = '818-318-3032';
+const PHONE = '818-699-7654';
 
 export default function NotFound() {
   return (

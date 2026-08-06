@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import SEO from '../components/SEO';
+import { InstagramIcon, YelpIcon } from '../components/SocialIcon';
 import { trackEvent } from '../lib/analytics';
 
-const PHONE = '818-318-3032';
-const PHONE_ALT = '818-699-7654';
+const PHONE = '818-699-7654';
+const PHONE_ALT = '818-318-3032';
 const EMAIL = 'Staticmechanicalinc@gmail.com';
 const YELP_URL = 'https://www.yelp.com/biz/static-mechanical-montrose';
+const INSTAGRAM_URL = 'https://www.instagram.com/static_mechanical/';
 
 const SERVICE_OPTIONS = [
   'AC Repair & Diagnostics',
@@ -91,18 +93,22 @@ export default function Contact() {
             Let&rsquo;s get your comfort handled.
           </h1>
           <p className="mb-12 max-w-2xl text-[17px] leading-relaxed text-gray-300">
-            Tell us what is happening with your system. We respond quickly during business hours and keep both partner lines available for urgent calls.
+            Tell us what is happening with your system. We respond quickly during business hours and keep a secondary service line available for urgent calls.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-8">
             <div id="call" className="scroll-mt-28 rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 backdrop-blur">
               <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-gray-500">CALL</p>
-              <a href={`tel:${PHONE}`} className="block text-[24px] font-semibold leading-snug text-white transition-colors hover:text-brand-blue">
-                {PHONE} <span aria-hidden="true">&gt;</span>
-              </a>
-              <a href={`tel:${PHONE_ALT}`} className="mt-2 block text-[22px] font-medium leading-snug text-gray-300 transition-colors hover:text-brand-blue">
-                {PHONE_ALT} <span aria-hidden="true">&gt;</span>
-              </a>
+              <div className="space-y-4">
+                <a href={`tel:${PHONE}`} className="block rounded border border-brand-blue/40 bg-brand-blue/10 p-4 transition-colors hover:border-brand-blue hover:bg-brand-blue/20">
+                  <span className="mb-1 block text-[12px] font-semibold uppercase tracking-[0.16em] text-brand-blue-lt">Main line</span>
+                  <span className="block text-[24px] font-semibold leading-snug text-white">{PHONE} <span aria-hidden="true">&gt;</span></span>
+                </a>
+                <a href={`tel:${PHONE_ALT}`} className="block rounded border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-white/25 hover:bg-white/[0.06]">
+                  <span className="mb-1 block text-[12px] font-semibold uppercase tracking-[0.16em] text-gray-500">Service line</span>
+                  <span className="block text-[21px] font-medium leading-snug text-gray-200">{PHONE_ALT} <span aria-hidden="true">&gt;</span></span>
+                </a>
+              </div>
             </div>
             <a href={`mailto:${EMAIL}`} className="group block rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 backdrop-blur">
               <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-gray-500">EMAIL</p>
@@ -142,19 +148,33 @@ export default function Contact() {
               </p>
             </div>
 
-            <a
-              href={YELP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 text-white backdrop-blur transition-colors hover:border-brand-blue/60"
-            >
-              <span className="font-semibold">Read our Yelp reviews</span>
-              <span aria-hidden="true">&gt;</span>
-            </a>
+            <div className="rounded border border-line bg-[rgba(11,16,23,0.78)] p-6 text-white backdrop-blur">
+              <p className="mb-4 text-[18px] font-semibold">Reviews & social</p>
+              <div className="flex gap-3">
+                <a
+                  href={YELP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded border border-white/15 text-white transition-colors hover:border-brand-blue hover:bg-brand-blue"
+                  aria-label="Open Static Mechanical Yelp reviews"
+                >
+                  <YelpIcon className="h-6 w-6" />
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded border border-white/15 text-white transition-colors hover:border-brand-blue hover:bg-brand-blue"
+                  aria-label="Open Static Mechanical Instagram"
+                >
+                  <InstagramIcon className="h-6 w-6" />
+                </a>
+              </div>
+            </div>
 
             <div className="rounded border border-white/10 bg-brand-blue text-white p-6">
               <p className="mb-1 text-[24px] font-semibold">HVAC emergency?</p>
-              <p className="text-[15px] leading-relaxed text-white/85">Use the call options at the top of this page for urgent service.</p>
+              <p className="text-[15px] leading-relaxed text-white/85">Use the main line at the top of this page for urgent service.</p>
             </div>
           </aside>
 
@@ -172,7 +192,7 @@ export default function Contact() {
                   We&rsquo;ve received your request and will be in touch shortly.
                 </p>
                 <p className="text-gray-400 text-sm">
-                  For urgent service, use the call options at the top of this page.
+                  For urgent service, use the main line at the top of this page.
                 </p>
               </div>
             ) : (
@@ -257,7 +277,7 @@ export default function Contact() {
                   {sending ? 'Sending...' : 'Submit Request'}
                 </button>
                 <p className="text-center text-[13px] text-gray-500">
-                  We respond within 1 hour during business hours. For emergencies, call either number above.
+                  We respond within 1 hour during business hours. For emergencies, call the main line above.
                 </p>
               </form>
             )}

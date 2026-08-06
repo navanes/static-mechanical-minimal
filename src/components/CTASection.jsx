@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const PHONE = '818-318-3032';
-const PHONE_ALT = '818-699-7654';
+const PHONE = '818-699-7654';
 
 function ArrowIcon() {
   return <span className="cta-arrow" aria-hidden="true" />;
@@ -25,13 +24,6 @@ export default function CTASection({
             aria-label={`Call Static Mechanical at ${PHONE}`}
           >
             Call {PHONE} <ArrowIcon />
-          </a>
-          <a
-            href={`tel:${PHONE_ALT}`}
-            className="group inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-lg border border-brand-blue bg-brand-blue px-7 text-base font-semibold text-white transition-colors duration-200 hover:bg-brand-blue-lt active:bg-[var(--color-primary-active)] sm:w-auto sm:min-w-56"
-            aria-label={`Call Static Mechanical at ${PHONE_ALT}`}
-          >
-            Call {PHONE_ALT} <ArrowIcon />
           </a>
           <Link
             to="/contact"

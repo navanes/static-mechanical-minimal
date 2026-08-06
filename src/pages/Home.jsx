@@ -5,8 +5,7 @@ import TrustBar from '../components/TrustBar';
 import StatsBar from '../components/StatsBar';
 import CTASection from '../components/CTASection';
 
-const PHONE = '818-318-3032';
-const PHONE_ALT = '818-699-7654';
+const PHONE = '818-699-7654';
 
 function ArrowIcon() {
   return <span className="cta-arrow" aria-hidden="true" />;
@@ -45,7 +44,7 @@ export default function Home() {
     <div style={HOME_BACKGROUND}>
       <SEO
         title="Commercial & Residential HVAC — Greater Los Angeles, CA"
-        description="Static Mechanical Inc. — commercial & residential HVAC contractor serving the greater Los Angeles area and surrounding communities. English, Armenian & Persian/Farsi speaking AC service. Call 818-318-3032."
+        description="Static Mechanical Inc. — commercial & residential HVAC contractor serving the greater Los Angeles area and surrounding communities. English, Armenian & Persian/Farsi speaking AC service. Call 818-699-7654."
         canonical="/"
       />
 
@@ -71,13 +70,6 @@ export default function Home() {
                 aria-label={`Call Static Mechanical at ${PHONE}`}
               >
                 Call {PHONE} <ArrowIcon />
-              </a>
-              <a
-                href={`tel:${PHONE_ALT}`}
-                className="group inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-lg border border-brand-blue bg-brand-blue px-7 text-base font-semibold text-white transition-colors duration-200 hover:bg-brand-blue-lt active:bg-[var(--color-primary-active)] min-[520px]:w-auto min-[520px]:min-w-56"
-                aria-label={`Call Static Mechanical at ${PHONE_ALT}`}
-              >
-                Call {PHONE_ALT} <ArrowIcon />
               </a>
               <Link
                 to="/contact"
