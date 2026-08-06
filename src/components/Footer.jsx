@@ -71,34 +71,37 @@ export default function Footer() {
                 {EMAIL}
               </a>
             </li>
-            <li className="flex gap-3 pt-2">
-              <a
-                href={YELP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded border border-white/15 text-gray-200 transition-colors hover:border-brand-blue hover:bg-brand-blue hover:text-white"
-                aria-label="Open Static Mechanical Yelp reviews"
-              >
-                <YelpIcon className="h-5 w-5" />
-              </a>
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded border border-white/15 text-gray-200 transition-colors hover:border-brand-blue hover:bg-brand-blue hover:text-white"
-                aria-label="Open Static Mechanical Instagram"
-              >
-                <InstagramIcon className="h-5 w-5" />
-              </a>
-            </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-line">
-        <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-2 px-6 py-5 text-[13px] text-gray-500 sm:flex-row">
+        <div className="max-w-6xl mx-auto px-6 py-8">
+          <div className="mb-8 h-px w-full bg-white/10" />
+          <div className="mb-8 flex items-center justify-center gap-5">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-white/[0.07] text-gray-100 transition-colors hover:border-brand-blue hover:bg-brand-blue hover:text-white"
+              aria-label="Open Static Mechanical Instagram"
+            >
+              <InstagramIcon className="h-8 w-8" />
+            </a>
+            <a
+              href={YELP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-white/[0.07] text-gray-100 transition-colors hover:border-brand-blue hover:bg-brand-blue hover:text-white"
+              aria-label="Open Static Mechanical Yelp reviews"
+            >
+              <YelpIcon className="h-8 w-8" />
+            </a>
+          </div>
+        </div>
+        <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-3 px-6 pb-7 text-[13px] text-gray-500 sm:flex-row">
           <p>LIC #{LICENSE_NO} · California</p>
-          <p>© 2026 Static Mechanical Inc.</p>
+          <p>All Rights Reserved 2026 © Static Mechanical Inc.</p>
         </div>
       </div>
     </footer>
