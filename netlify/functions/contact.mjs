@@ -37,6 +37,29 @@ const formatHtml = (data) => `
 
 const uniqueRecipients = (emails) => [...new Set(emails.filter(Boolean))];
 
+async function sendToRecipient({ apiKey, from, recipient, data }) {
+  const res = await fetch(RESEND_API_URL, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from,
+      to: [recipient],
+      reply_to: data.email || undefined,
+      subject: `New HVAC request from ${data.name}`,
+      text: formatText(data),
+      html: formatHtml(data),
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Resend failed for ${recipient}: ${body}`);
+  }
+}
+
 async function sendEmail(data) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.REPORT_FROM_EMAIL || 'Static Mechanical <onboarding@resend.dev>';
@@ -56,26 +79,14 @@ async function sendEmail(data) {
     throw new Error('RESEND_API_KEY is not configured.');
   }
 
-  for (const recipient of uniqueRecipients([to, ...extraRecipients])) {
-    const res = await fetch(RESEND_API_URL, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from,
-        to: [recipient],
-        reply_to: data.email || undefined,
-        subject: `New HVAC request from ${data.name}`,
-        text: formatText(data),
-        html: formatHtml(data),
-      }),
-    });
+  await sendToRecipient({ apiKey, from, recipient: to, data });
 
-    if (!res.ok) {
-      const body = await res.text();
-      throw new Error(`Resend failed: ${body}`);
+  const copyRecipients = uniqueRecipients(extraRecipients).filter((recipient) => recipient !== to);
+  for (const recipient of copyRecipients) {
+    try {
+      await sendToRecipient({ apiKey, from, recipient, data });
+    } catch (error) {
+      console.error(error);
     }
   }
 }
