@@ -1,4 +1,6 @@
 const RESEND_API_URL = 'https://api.resend.com/emails';
+const DEFAULT_CONTACT_EMAIL = 'Staticmechanicalinc@gmail.com';
+const DEFAULT_FALLBACK_EMAIL = 'mr.narek.avanesian@gmail.com';
 
 const escapeHtml = (value = '') =>
   String(value)
@@ -38,8 +40,9 @@ const uniqueRecipients = (emails) => [...new Set(emails.filter(Boolean))];
 async function sendEmail(data) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.REPORT_FROM_EMAIL || 'Static Mechanical <onboarding@resend.dev>';
-  const to = process.env.CONTACT_TO_EMAIL || process.env.REPORT_TO_EMAIL || 'mr.narek.avanesian@gmail.com';
+  const to = process.env.CONTACT_TO_EMAIL || process.env.REPORT_TO_EMAIL || DEFAULT_FALLBACK_EMAIL;
   const extraRecipients = [
+    DEFAULT_CONTACT_EMAIL,
     process.env.CONTACT_COPY_EMAIL,
     process.env.CONTACT_CC_EMAIL,
   ]

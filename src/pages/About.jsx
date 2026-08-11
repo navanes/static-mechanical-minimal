@@ -59,7 +59,7 @@ export default function About() {
             <p className="mb-4 text-[16px] leading-[1.65] text-gray-300 md:text-[17px]">
               Static Mechanical Inc. was founded with one mission: provide the kind of honest,
               high-quality HVAC contracting that homeowners and businesses across the greater
-              Los Angeles area couldn't easily find. No bait-and-switch pricing,
+              Los Angeles area couldn&rsquo;t easily find. No bait-and-switch pricing,
               no scare tactics — just skilled crews who fix the problem and treat every property
               with respect.
             </p>

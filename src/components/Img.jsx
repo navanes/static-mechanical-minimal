@@ -26,7 +26,7 @@ const FALLBACKS = {
   '/images/static-newconstruction.jpg': 'https://picsum.photos/seed/sm-newconst/900/600',
 };
 
-const Img = forwardRef(function Img({ src, alt, className, style, loading = 'lazy', fetchpriority }, ref) {
+const Img = forwardRef(function Img({ src, alt, className, style, loading = 'lazy', fetchPriority }, ref) {
   const fallback = FALLBACKS[src] || 'https://picsum.photos/seed/fb-default/800/600';
   return (
     <img
@@ -36,7 +36,7 @@ const Img = forwardRef(function Img({ src, alt, className, style, loading = 'laz
       className={className}
       style={style}
       loading={loading}
-      fetchpriority={fetchpriority}
+      fetchPriority={fetchPriority}
       decoding={loading === 'eager' ? 'sync' : 'async'}
       onError={(e) => {
         if (e.target.src !== fallback) e.target.src = fallback;
